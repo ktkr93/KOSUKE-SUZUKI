@@ -1,0 +1,152 @@
+/**
+ * ***************************************
+ * ページ全体に関わるCSSの設定
+ * ***************************************
+ */
+
+
+/* フォント */
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* おもな太字タグのフォントウェイト設定 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+strong {
+    font-weight: 700;
+}
+
+
+/* ベースのリンクカラー */
+
+a {
+    color: #f30;
+}
+
+
+/* レスポンシブイメージと画像下スペース防止 */
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    /* 画像下のスペースを消す */
+}
+
+
+/**
+ * ***************************************
+ * メインタイトルコンテナ
+ * ***************************************
+ */
+
+.page-title-container {
+    max-width: 300px;
+    margin: 60px auto;
+}
+
+.page-title-container h1 {
+    font-size: 1.85rem;
+    font-weight: lighter;
+    letter-spacing: 0.5rem;
+}
+
+.page-title-container h2 {
+    margin-top: 7px;
+    font-size: 0.85rem;
+    color: #545454;
+    line-height: 1.2rem;
+    letter-spacing: 0.06rem;
+}
+
+.self-introduction-container {
+    max-width: 300px;
+    margin: 60px auto;
+}
+
+.self-introduction-container p {
+    line-height: 1.6rem;
+    letter-spacing: 0.08rem;
+}
+
+.self-introduction-container ul {
+    margin-top: 40px;
+    padding-left: 1.5rem;
+    list-style: circle;
+}
+
+.self-introduction-container ul li,
+.self-introduction-container ul p {
+    font-size: 0.85rem;
+}
+
+.self-introduction-container ul li {
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.self-introduction-description {
+    font-size: 0.7rem;
+}
+
+.created {
+    background-color: #F5F5F5;
+}
+
+.created-container {
+    max-width: 342px;
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+.created-container h3 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.created-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.created-img img:not(:first-child) {
+    padding-top: 20px;
+}
+
+.profile-container {
+    max-width: 340px;
+    margin: 60px auto 40px auto;
+    display: flex;
+    gap: 20px;
+}
+
+.profile-img {
+    min-width: 90px;
+}
+
+.profile-img img {
+    width: 100%;
+}
+
+.profile-text ul li:not(:first-child) {
+    margin-top: 12px;
+}
