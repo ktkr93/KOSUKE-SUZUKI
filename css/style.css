@@ -62,12 +62,28 @@ img {
 .page-title-container {
     max-width: 300px;
     margin: 60px auto;
+    padding: 0 2%;
+}
+
+@media (min-width: 768px) {
+    .page-title-container {
+        max-width: 415px;
+        margin: 200px auto 0 auto;
+        padding: 0 40px;
+    }
 }
 
 .page-title-container h1 {
     font-size: 1.85rem;
     font-weight: lighter;
     letter-spacing: 0.5rem;
+}
+
+@media(min-width: 768px) {
+    .page-title-container h1 {
+        font-size: 1.875rem;
+        letter-spacing: 0.5rem;
+    }
 }
 
 .page-title-container h2 {
@@ -81,6 +97,14 @@ img {
 .self-introduction-container {
     max-width: 300px;
     margin: 60px auto;
+    padding: 0 2%;
+}
+
+@media (min-width: 768px) {
+    .self-introduction-container {
+        max-width: 900px;
+        margin: 200px auto 80px auto;
+    }
 }
 
 .self-introduction-container p {
@@ -115,7 +139,15 @@ img {
 .created-container {
     max-width: 342px;
     margin: 0 auto;
-    padding: 32px 0;
+    padding: 32px 2%;
+}
+
+@media (min-width: 768px) {
+    .created-container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 80px 40px;
+    }
 }
 
 .created-container h3 {
@@ -123,20 +155,61 @@ img {
     margin-bottom: 32px;
 }
 
-.created-img img {
-    width: 100%;
-    object-fit: cover;
+@media (min-width: 768px) {
+    .created-container h3 {
+        font-size: 1.75rem;
+        font-weight: normal;
+        margin-bottom: 80px;
+    }
 }
 
-.created-img img:not(:first-child) {
+.created-img a {
+    display: block;
+    transition: 0.5s;
+}
+
+.created-img a:hover {
+    opacity: 0.5;
+}
+
+.created-img a:not(:first-child) {
     padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .created-img a:not(:first-child) {
+        padding-top: 40px;
+    }
+}
+
+.created-img img {
+    width: 100%;
+    height: 202px;
+    object-fit: cover;
+    object-position: top;
+}
+
+@media (min-width: 768px) {
+    .created-img img {
+        width: 100%;
+        height: 420px;
+    }
 }
 
 .profile-container {
     max-width: 340px;
     margin: 60px auto 40px auto;
+    padding: 0 2%;
     display: flex;
     gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .profile-container {
+        max-width: 940px;
+        margin: 80px auto;
+        padding: 0 40px;
+    }
 }
 
 .profile-img {
@@ -147,6 +220,12 @@ img {
     width: 100%;
 }
 
-.profile-text ul li:not(:first-child) {
+.profile-text h3 {
+    font-weight: normal;
+}
+
+.profile-text p {
+    font-size: 0.85rem;
+    line-height: 1.2rem;
     margin-top: 12px;
 }
