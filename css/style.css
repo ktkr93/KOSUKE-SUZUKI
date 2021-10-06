@@ -94,41 +94,41 @@ img {
     letter-spacing: 0.06rem;
 }
 
-.self-introduction-container {
+.self-intro-container {
     max-width: 300px;
     margin: 60px auto;
     padding: 0 2%;
 }
 
 @media (min-width: 768px) {
-    .self-introduction-container {
+    .self-intro-container {
         max-width: 900px;
         margin: 200px auto 80px auto;
     }
 }
 
-.self-introduction-container p {
+.self-intro-container p {
     line-height: 1.6rem;
     letter-spacing: 0.08rem;
 }
 
-.self-introduction-container ul {
+.self-intro-container ul {
     margin-top: 40px;
     padding-left: 1.5rem;
     list-style: circle;
 }
 
-.self-introduction-container ul li,
-.self-introduction-container ul p {
+.self-intro-container ul li,
+.self-intro-container ul p {
     font-size: 0.85rem;
 }
 
-.self-introduction-container ul li {
+.self-intro-container ul li {
     margin-top: 16px;
     font-weight: bold;
 }
 
-.self-introduction-description {
+.self-intro-description {
     font-size: 0.7rem;
 }
 
