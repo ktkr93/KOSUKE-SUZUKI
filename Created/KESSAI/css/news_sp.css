@@ -1,0 +1,70 @@
+.problem-list .header-container {
+    margin-bottom: 18px;
+}
+
+.page-ProbList-heading {
+    background-color: #4079FD;
+}
+
+.ProbList-heading-container {
+    padding: 10% 4%;
+    text-align: center;
+    position: relative;
+}
+
+.ProbList-heading-container h2 {
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.ProbList-heading-container h3 {
+    margin-bottom: 8px;
+}
+
+.ProbList-heading-container p {
+    margin-bottom: 18px;
+}
+
+.ProbList-heading-container h2,
+.ProbList-heading-container h3,
+.ProbList-heading-container p {
+    color: #fff;
+}
+
+.news-icon {
+    width: 70px;
+    position: absolute;
+    left: 40%;
+    bottom: -30px;
+}
+
+.news-container {
+    margin: 58px 0 60px 0;
+    padding: 0 4% 0 4%;
+}
+
+.news-container dl {
+    margin-bottom: 40px;
+}
+
+.news-container a {
+    display: block;
+    border-top: 1px #DBDBDB solid;
+}
+
+.news-container dl a:last-child {
+    border-bottom: 1px #DBDBDB solid;
+}
+
+.news-container dt {
+    padding: 10px 0;
+}
+
+time {
+    color: #000;
+}
+
+.news-container dd {
+    padding-bottom: 10px;
+}

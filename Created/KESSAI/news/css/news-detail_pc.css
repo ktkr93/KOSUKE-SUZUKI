@@ -1,0 +1,6 @@
+@media screen and (min-width: 768px) {
+    .news-detail-container {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+}

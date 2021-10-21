@@ -1,0 +1,18 @@
+@media screen and (min-width: 768px) {
+    .ProbList-heading-container {
+        padding: 1% 4% 50px 4%;
+        text-align: center;
+        position: relative;
+    }
+    .lightning {
+        left: 48%;
+    }
+    .feature-container {
+        flex-direction: column;
+        width: 800px;
+        margin: 0 auto;
+    }
+    .feature-inner p {
+        text-align: center;
+    }
+}

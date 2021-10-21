@@ -1,0 +1,13 @@
+@media screen and (min-width: 768px) {
+    .ProbList-heading-container {
+        padding: 1% 4% 50px 4%;
+    }
+    .news-icon {
+        left: 48%;
+    }
+    .news-container {
+        width: 800px;
+        margin: 0 auto;
+        padding: 80px 4%;
+    }
+}

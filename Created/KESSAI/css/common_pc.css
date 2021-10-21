@@ -1,0 +1,155 @@
+    @media screen and (min-width: 768px) {
+        /**
+ * ***************************************
+ * ページ全体に関わるCSSの設定
+ * ***************************************
+ */
+        h2 {
+            font-size: 5.35rem;
+            margin-bottom: 32px;
+            line-height: 6rem;
+        }
+        /**
+ * ***************************************
+ * ヘッダー
+ * ***************************************
+ *
+ * ヘッダーコンテナ
+ */
+        .header-container {
+            display: block;
+            margin: 0 auto;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            display: block;
+            flex-direction: row;
+            justify-content: flex-end;
+            width: auto;
+            height: auto;
+            padding-top: 0;
+            position: unset;
+            background-color: transparent;
+        }
+        .header-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0;
+            padding-top: 0;
+        }
+        .header-nav li a {
+            padding: 6px 20px 2px 20px;
+            color: #18B7CD;
+            font-size: 1.285rem;
+        }
+        .openbtn {
+            display: none;
+        }
+        /**
+ * ***************************************
+ * メインコンテナ
+ * ***************************************
+ */
+        .main-container {
+            max-width: 1260px;
+            padding: 0 4% 0 4%;
+            margin: 0 auto;
+        }
+        /* メインビジュアル */
+        .main-visual-inner {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 100px;
+        }
+        .pcscreen_pc {
+            display: block;
+        }
+        .main-visual-inner img {
+            width: 900px;
+        }
+        .pcscreen_sp {
+            display: none;
+        }
+        .main-cta {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .cta-demo,
+        .cta-doc {
+            width: 310px;
+            margin-bottom: 30px;
+        }
+        /* お悩みエリア */
+        .problems-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 40px auto 40px auto;
+        }
+        .problems-container {
+            max-width: 1000px;
+        }
+        .problems-detail:nth-child(2n) {
+            flex-direction: row;
+        }
+        .revers::after {
+            left: -14px;
+            border-width: 0px 20px 20px 0;
+            border-color: transparent #fff transparent transparent;
+        }
+        .detail-link {
+            margin: 0 auto;
+            width: 180px;
+        }
+        /* 機能エリア */
+        .feature-detail p {
+            text-align: center;
+        }
+        /* 導入実績エリア */
+        .achievement-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            margin: 0 auto;
+            justify-items: center;
+        }
+        .achievement-detail img {
+            width: 100px;
+        }
+        /* ニュースエリア */
+        .news-contents {
+            margin: 0 auto 60px auto;
+            width: 70%;
+        }
+        .news-list-row {
+            display: flex;
+            align-items: baseline;
+        }
+        .news-list-row dd {
+            padding: 10px 0 10px 18px;
+        }
+        .contact-contents {
+            margin: 0 auto 60px auto;
+            max-width: 70%;
+        }
+        /**
+ * ***************************************
+ * フッター
+ * ***************************************
+ *
+ * フッターコンテナ
+ */
+        .bottom-box {
+            display: flex;
+            gap: 60px;
+        }
+        .bottom-container,
+        .footer-container {
+            padding: 4%;
+        }
+    }

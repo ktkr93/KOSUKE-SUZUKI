@@ -1,0 +1,16 @@
+.news-detail-container {
+    padding: 10% 4%;
+}
+
+.news-detail-container h2 {
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+}
+
+time {
+    font-weight: bold;
+}
+
+.news-detail-container p {
+    margin-top: 18px;
+}

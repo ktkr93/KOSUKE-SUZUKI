@@ -1,0 +1,674 @@
+/**
+ * ***************************************
+ * ページ全体に関わるCSSの設定
+ * ***************************************
+ */
+
+
+/* フォント */
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "arial";
+    font-weight: 400;
+}
+
+
+/* おもな太字タグのフォントウェイト設定 */
+
+h1,
+h2,
+h3,
+h5,
+h6,
+th {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.35rem;
+    color: #000;
+}
+
+h2 {
+    font-size: 2.35rem;
+    margin-bottom: 32px;
+    line-height: 3.0rem;
+}
+
+h3 {
+    color: #4079FD;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3::before {
+    margin-right: 36px;
+    -webkit-transform: rotate( 45deg);
+    transform: rotate( 45deg);
+}
+
+h3::after {
+    margin-left: 36px;
+    -webkit-transform: rotate( -45deg);
+    transform: rotate( -45deg);
+}
+
+h3::before,
+h3::after {
+    background-color: #4079FD;
+    width: 12px;
+    display: inline-block;
+    position: relative;
+    top: -0.35em;
+    height: 2px;
+    content: "";
+}
+
+h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.8rem;
+}
+
+h5 {
+    text-align: center;
+}
+
+
+/* ベースのリンクカラー */
+
+a {
+    color: #18B7CD;
+    font-weight: bold;
+}
+
+
+/* レスポンシブイメージと画像下スペース防止 */
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    /* 画像下のスペースを消す */
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+
+/*==================================================
+MENUがCLOSEに
+===================================*/
+
+.openbtn {
+    /*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+    position: relative;
+    border: #4079FD 1px solid;
+    cursor: pointer;
+    width: 127px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+}
+
+.openbtn_text {
+    padding: 2% 14% 0 0;
+}
+
+.openbtn_text p {
+    color: #4079FD;
+    font-weight: bold;
+}
+
+
+/*ボタン内側*/
+
+.openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    /*アニメーションの設定*/
+    position: absolute;
+    left: 18px;
+    height: 2px;
+    border-radius: 5px;
+    background: #4079FD;
+    width: 16%;
+}
+
+.openbtn span:nth-of-type(1) {
+    top: 13px;
+}
+
+.openbtn span:nth-of-type(2) {
+    top: 19px;
+}
+
+.openbtn span:nth-of-type(3) {
+    top: 25px;
+}
+
+
+/*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+
+.openbtn.active span {
+    background: #fff;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 14px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 16%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+    top: 26px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 16%;
+}
+
+.active .openbtn_text p {
+    color: #fff;
+}
+
+.openbtn.active {
+    border: #fff 1px solid;
+}
+
+
+/*スクロールさせない*/
+
+.noscroll {
+    overflow: hidden;
+}
+
+
+/*========= LoadingのためのCSS ===============*/
+
+
+/* Loading背景画面設定 */
+
+#splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    text-align: center;
+    color: #fff;
+}
+
+
+/* Loading画像中央配置　*/
+
+#splash_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    width: 100%;
+}
+
+
+/*IE11対策用バーの線の高さ*/
+
+#splash_text svg {
+    height: 2px;
+}
+
+
+/*割れる画面のアニメーション*/
+
+.loader_cover {
+    width: 100%;
+    height: 50%;
+    background-color: #147896;
+    transition: all .2s cubic-bezier(.04, .435, .315, .9);
+    transform: scaleY(1);
+}
+
+
+/*上の画面*/
+
+.loader_cover-up {
+    transform-origin: center top;
+}
+
+
+/*下の画面*/
+
+.loader_cover-down {
+    position: absolute;
+    bottom: 0;
+    transform-origin: center bottom;
+}
+
+
+/*クラス名がついたらY軸方向に0*/
+
+.coveranime {
+    transform: scaleY(0);
+}
+
+
+/**
+ * ***************************************
+ * ヘッダー
+ * ***************************************
+ *
+ * ヘッダーコンテナ
+ */
+
+.header-container {
+    margin: 0 auto;
+    padding: 18px 4% 18px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container a {
+    display: block;
+}
+
+nav {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 03;
+    background-color: #147896;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 54px;
+    padding-top: 135px;
+}
+
+.header-nav li a {
+    color: #fff;
+    font-size: 24px;
+}
+
+
+/**
+ * ***************************************
+ * メインコンテナ
+ * ***************************************
+ */
+
+.main-container {
+    margin: 0 auto;
+    padding: 0 4% 0 4%;
+}
+
+
+/* メインビジュアル */
+
+.main-visual {}
+
+.pcscreen_pc {
+    display: none;
+}
+
+.mainvisual p {
+    margin-top: 32px;
+}
+
+.main-cta {
+    margin: 60px 0 0 0;
+    text-align: center;
+}
+
+.main-cta a {
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.cta-demo {
+    background-color: #FF8743;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.cta-demo a {
+    display: block;
+    padding: 14px 24px;
+}
+
+.cta-doc {
+    background-color: #18B7CD;
+    border-radius: 100px;
+    margin-bottom: 30px;
+}
+
+.cta-doc a {
+    display: block;
+    padding: 14px 24px;
+}
+
+.main-visual img {
+    margin-bottom: 60px;
+}
+
+
+/* お悩みエリア */
+
+.problems-contents {
+    margin-bottom: 60px;
+    background-color: #EEF5FF;
+}
+
+.problems {
+    padding: 40px 4% 40px 4%;
+}
+
+.problems-container {
+    margin: 0 auto 40px auto;
+    max-width: 352px;
+}
+
+.problems-detail {
+    display: flex;
+    gap: 5%;
+}
+
+.problems-detail:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.problems-detail:not(:last-child) {
+    margin-bottom: 22px;
+}
+
+.problems-detail img {
+    width: 36px;
+    height: 36px;
+}
+
+.baloon {
+    width: 240px;
+    height: 80px;
+    background-color: #fff;
+    position: relative;
+}
+
+.baloon a {
+    display: block;
+    padding: 6% 6% 14% 6%;
+}
+
+.row {
+    box-shadow: 2px 2px 4px 0 #a1a1a1;
+}
+
+.row::before {
+    left: -14px;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 20px 20px 0;
+    border-color: transparent #fff transparent transparent;
+    content: '';
+}
+
+.revers {
+    box-shadow: 2px 2px 4px 0 #a1a1a1;
+}
+
+.revers::after {
+    right: -14px;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    border-color: transparent transparent transparent #fff;
+    content: '';
+}
+
+.fas,
+.fa-chevron-right {
+    padding: 0 0 0 10px;
+}
+
+.fa-size {
+    font-size: .8rem;
+}
+
+.detail-link {
+    background-color: #18B7CD;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.detail-link a {
+    display: block;
+    padding: 14px 0;
+    color: #fff;
+}
+
+
+/* 機能エリア */
+
+.feature-contents {
+    margin-bottom: 60px;
+}
+
+.achievement-contents {
+    margin-bottom: 60px;
+}
+
+.feature-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.feature-detail {
+    width: calc(50% - 20px);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.feature-detail img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.feature-detail h5 {
+    margin-bottom: 14px;
+}
+
+.feature-detail p {
+    text-align: left;
+}
+
+
+/* 導入実績エリア */
+
+.achievement-detail {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.achievement-detail img {
+    width: calc(30% - 18px);
+}
+
+
+/* ニュースエリア */
+
+.news-contents {
+    margin-bottom: 60px;
+}
+
+.news-contents dl {
+    margin-bottom: 40px;
+}
+
+.news-contents a {
+    display: block;
+    border-top: 1px #DBDBDB solid;
+}
+
+.news-contents dl a:last-child {
+    border-bottom: 1px #DBDBDB solid;
+}
+
+.news-contents dt {
+    padding: 10px 0;
+}
+
+time {
+    color: #000;
+}
+
+.news-contents dd {
+    padding-bottom: 10px;
+}
+
+
+/* お問い合わせエリア */
+
+.contact-contents {
+    margin: 0 4% 60px 4%;
+    border: 1px #4079FD solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-contents h3::before,
+.contact-contents h3::after {
+    width: 0;
+    height: 0;
+}
+
+.contact-contents h3 {
+    margin-top: -7px;
+}
+
+.contact-contents h3 span {
+    padding: 0 20px;
+    background-color: #fff;
+}
+
+.contact-contents h4 {
+    font-weight: normal;
+    color: #4079FD;
+}
+
+.contact-cta {
+    margin: 20px 0;
+}
+
+.contact-cta a {
+    display: inline-block;
+    background-color: #FBFF3A;
+    border-radius: 14px;
+    padding: 14px 20px;
+    color: #000;
+}
+
+
+/**
+ * ***************************************
+ * ページ下部
+ * ***************************************
+ *
+ * ページ下部コンテナ
+ */
+
+.page-bottom {
+    background-color: #202020;
+}
+
+.bottom-container {
+    padding: 10% 4% 10% 4%;
+    color: #fff;
+}
+
+.bottom-container a {
+    color: #fff;
+    font-weight: normal;
+    position: relative;
+}
+
+.bottom-container li:not(.bottom-heading) {
+    padding-left: 1rem;
+}
+
+.bottom-container li a:not(.bottom-heading) {
+    line-height: 2rem;
+    padding-left: 1rem;
+}
+
+.bottom-container li a::before {
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 0.55em;
+    left: 0;
+    width: 5px;
+    height: 1px;
+    content: '';
+}
+
+.bottom-heading {
+    margin-top: 24px;
+    font-weight: bold;
+}
+
+
+/**
+ * ***************************************
+ * フッター
+ * ***************************************
+ *
+ * フッターコンテナ
+ */
+
+footer {}
+
+.footer-container {
+    padding: 12% 4%;
+    text-align: center;
+}
+
+.address {
+    margin-bottom: 54px;
+}
