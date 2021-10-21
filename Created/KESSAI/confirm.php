@@ -1,3 +1,12 @@
+<?php
+    $company = isset($_POST["company"])? $_POST["company"] : "";
+    $name = isset($_POST["name"])? $_POST["name"] : "";
+    $division = isset($_POST["division"])? $_POST["division"] : "";
+    $tel = isset($_POST["tel"])? $_POST["tel"] : "";
+    $email = isset($_POST["email"])? $_POST["email"] : "";
+    $question = isset($_POST["question"])? $_POST["question"] : "";
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -37,7 +46,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
-<body class="inquiry">
+<body class="confirm">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W76H9PT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -73,71 +82,74 @@
     </header>
     <div class="page-demo-heading">
         <div class="demo-heading-container">
-            <h2>お問い合わせ</h2>
+            <h2>確認画面</h2>
         </div>
     </div>
     <div class="page-demo-main">
         <div class="demo-main-container">
             <p class="demo-main-heading">KESSAIの特長紹介資料をご希望の方は、以下のフォームに必要事項をご入力ください。</p>
-            <form id="form" class="form" action="#">
-                <p>
+            <form id="form" class="form" action="confirm.php" method="post">
+            <input type="hidden" name="company" value="<?php echo htmlspecialchars($company,ENT_QUOTES,"UTF-8"); ?>">
+            <input type="hidden" name="name" value="<?php echo htmlspecialchars($name,ENT_QUOTES,"UTF-8"); ?>">
+            <input type="hidden" name="division" value="<?php echo htmlspecialchars($division,ENT_QUOTES,"UTF-8"); ?>">
+            <input type="hidden" name="tel" value="<?php echo htmlspecialchars($tel,ENT_QUOTES,"UTF-8"); ?>">
+            <input type="hidden" name="email" value="<?php echo htmlspecialchars($email,ENT_QUOTES,"UTF-8"); ?>">
+            <input type="hidden" name="question" value="<?php echo htmlspecialchars($question,ENT_QUOTES,"UTF-8"); ?>">
+            <p>
                     <label for="company"><span class="required">必須</span>会社名</label><br>
-                    <input type="text" name="company" id="company" placeholder="KESSAI株式会社" required>
+                    <?php echo htmlspecialchars($company,ENT_QUOTES,"UTF-8"); ?>
                 </p>
                 <p>
                     <label for="name"><span class="required">必須</span>お名前</label><br>
-                    <input type="text" name="name" id="name" placeholder="決裁 太郎" required>
+                    <?php echo htmlspecialchars($name,ENT_QUOTES,"UTF-8"); ?>
                 </p>
                 <p>
                     <label for="division"><span class="required">必須</span>部署</label><br>
-                    <input type="text" name="division" id="division" placeholder="マーケティング ディビジョン" required>
+                    <?php echo htmlspecialchars($division,ENT_QUOTES,"UTF-8"); ?>
                 </p>
                 <p>
                     <label for="tel"><span class="required">必須</span>電話番号</label><br>
-                    <input type="tel" name="tel" id="tel" placeholder="08012345678" required>
+                    <?php echo htmlspecialchars($tel,ENT_QUOTES,"UTF-8"); ?>
                 </p>
                 <p>
                     <label for="email"><span class="required">必須</span>メールアドレス</label><br>
-                    <input type="email" name="email" id="email" placeholder="taro@kessai.com" required>
+                    <?php echo htmlspecialchars($email,ENT_QUOTES,"UTF-8"); ?>
                 </p>
-                <div class="checkbox">
-                    <label class="checkbox-inq" for="inquiry"><span class="required">必須</span>お問い合わせの理由</label><br>
-                    <p><label><input type="checkbox" name="inquiry" id="inquiry" value="inquiry" required>質問したい</label></p>
-                    <p><label><input type="checkbox" name="inquiry" id="inquiry" value="inquiry" required>資料を希望したい</label></p>
-                    <p><label><input type="checkbox" name="inquiry" id="inquiry" value="inquiry" required>自社採用したい</label></p>
-                    <p><label><input type="checkbox" name="inquiry" id="inquiry" value="inquiry" required>クライアントへ提案したい</label></p>
-                </div>
                 <p>
                     <label for="question">その他にご質問や不明点などがございましたらご記入ください</label>
-                    <textarea name="question" id="question"></textarea>
+                    <?php echo htmlspecialchars($question,ENT_QUOTES,"UTF-8"); ?>
                 </p>
+                <input class="inq-back" type="button" value="戻る" onClick="history.back()">
+                <input class="inq-send" type="submit" name="send" value="送信する">
             </form>
-            <p class="tc"><a href="" target="blank">個人情報の取り扱い<i class="fas fa-external-link-alt"></i></a>に同意したものとします。</p>
-            <div class="detail-link detail-link-inq">
-                <a href="">問い合わせる</a>
-            </div>
         </div>
     </div>
     <div class="page-bottom">
         <div class="bottom-container">
-            <ul>
-                <li class="bottom-heading">ホーム</li>
-                <li class="bottom-heading">KESSAIにできること
-                    <br>～こんなお悩みありませんか？～</li>
-                <ul>
-                    <li><a href="problems/problem01.html">申請書を作るのがめんどくさい・・・</a></li>
-                    <li><a href="problems/problem02.html">一日に何度も承認するのに時間がかかりすぎる</a></li>
-                    <li><a href="problems/problem03.html">一日に何度も承認するのに時間がかかりすぎる</a></li>
-                    <li><a href="problems/problem04.html">申請した決裁がなかなか承認されない・・・</a></li>
-                </ul>
-                <li class="bottom-heading">KESSAIの機能</li>
-                <ul>
-                    <li><a href="feature.html">シンプルなフォーム</a></li>
-                    <li><a href="feature.html">フロー管理</a></li>
-                    <li><a href="feature.html">追っかけ機能</a></li>
-                    <li><a href="feature.html">アラート機能</a></li>
-                </ul>
-                <li class="bottom-heading">お知らせ</li>
+            <ul class="bottom-box">
+                <div>
+                    <li class="bottom-heading">ホーム</li>
+                    <li class="bottom-heading">KESSAIにできること
+                        <br>～こんなお悩みありませんか？～</li>
+                    <ul>
+                        <li><a href="problems/problem01.html">申請書を作るのがめんどくさい・・・</a></li>
+                        <li><a href="problems/problem02.html">一日に何度も承認するのに時間がかかりすぎる</a></li>
+                        <li><a href="problems/problem03.html">一日に何度も承認するのに時間がかかりすぎる</a></li>
+                        <li><a href="problems/problem04.html">申請した決裁がなかなか承認されない・・・</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <li class="bottom-heading">KESSAIの機能</li>
+                    <ul>
+                        <li><a href="feature.html">シンプルなフォーム</a></li>
+                        <li><a href="feature.html">フロー管理</a></li>
+                        <li><a href="feature.html">追っかけ機能</a></li>
+                        <li><a href="feature.html">アラート機能</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <li class="bottom-heading"><a href="feature.html">お知らせ</a></li>
+                </div>
             </ul>
         </div>
     </div>

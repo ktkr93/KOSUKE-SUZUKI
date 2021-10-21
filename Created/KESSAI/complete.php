@@ -26,25 +26,25 @@
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="noindex,nofollow">
-    <title>否認された決裁の何がダメなのかわかりづらい</title>
+    <title>お問い合わせ</title>
     <link rel="shortcut icon" href="">
-    <link rel="stylesheet" type="text/css" href="../css/destyle.css">
-    <link rel="stylesheet" type="text/css" href="../css/common_sp.css">
-    <link rel="stylesheet" type="text/css" href="../css/common_pc.css">
-    <link rel="stylesheet" type="text/css" href="../css/problems_sp.css">
-    <link rel="stylesheet" type="text/css" href="../css/problems_pc.css">
+    <link rel="stylesheet" type="text/css" href="css/destyle.css">
+    <link rel="stylesheet" type="text/css" href="css/common_sp.css">
+    <link rel="stylesheet" type="text/css" href="css/common_pc.css">
+    <link rel="stylesheet" type="text/css" href="css/application_sp.css">
+    <link rel="stylesheet" type="text/css" href="css/application_pc.css">
     <script src="https://kit.fontawesome.com/f66cdf6395.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
-<body class="problem-list">
+<body class="complete">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W76H9PT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="page-header">
         <div class="header-container">
-                        <div class="header-inner">
+            <div class="header-inner">
                 <div>
                     <a href="index.html">
                         <h1>KESSAI</h1>
@@ -57,7 +57,8 @@
                         <li><a href="feature.html">機能</a></li>
                         <li><a href="news.html">お知らせ</a></li>
                     </ul>
-                </nav>            </div>
+                </nav>
+            </div>
             <div class="openbtn">
                 <div>
                     <span></span>
@@ -70,44 +71,52 @@
             </div>
         </div>
     </header>
-    <div class="page-ProbList-heading">
-        <div class="ProbList-heading-container">
-            <h2>解決できる課題</h2>
-            <h2>否認された決裁の何がダメなのかわかりづらい</h2>
-            <h3>KESSAIの特徴がわかる！</h3>
-            <div class="contact-cta">
-                <a href="">特長紹介資料をダウンロード<i class="fas fa-chevron-right fa-size"></i></a>
-            </div>
-            <img class="lightning" src="../images/lightning.png">
+    <div class="page-demo-heading">
+        <div class="demo-heading-container">
+            <h2>お問い合わせ</h2>
         </div>
     </div>
-    <div class="problems-detail">
-        <div class="problems-detail-container">
-            <div class="problems-detail-point">
-                <div>
-                    <img src="../images/BussinessPeson.png">
+    <div class="page-demo-main">
+        <div class="demo-main-container">
+            <p class="demo-main-heading">KESSAIの特長紹介資料をご希望の方は、以下のフォームに必要事項をご入力ください。</p>
+            <form id="form" class="form" action="#">
+                <p>
+                    <label for="company"><span class="required">必須</span>会社名</label><br>
+                    <input type="text" name="company" id="company" placeholder="KESSAI株式会社" required>
+                </p>
+                <p>
+                    <label for="name"><span class="required">必須</span>お名前</label><br>
+                    <input type="text" name="name" id="name" placeholder="決裁 太郎" required>
+                </p>
+                <p>
+                    <label for="division"><span class="required">必須</span>部署</label><br>
+                    <input type="text" name="division" id="division" placeholder="マーケティング ディビジョン" required>
+                </p>
+                <p>
+                    <label for="tel"><span class="required">必須</span>電話番号</label><br>
+                    <input type="tel" name="tel" id="tel" placeholder="08012345678" required>
+                </p>
+                <p>
+                    <label for="email"><span class="required">必須</span>メールアドレス</label><br>
+                    <input type="email" name="email" id="email" placeholder="taro@kessai.com" required>
+                </p>
+                <div class="checkbox">
+                    <label class="checkbox-inq" for="inquiry"><span class="required">必須</span>お問い合わせの理由</label><br>
+                    <p><label><input type="checkbox" name="inquiry" id="inquiry" value="inquiry" required>質問したい</label></p>
+                    <p><label><input type="checkbox" name="inquiry" id="inquiry" value="inquiry" required>資料を希望したい</label></p>
+                    <p><label><input type="checkbox" name="inquiry" id="inquiry" value="inquiry" required>自社採用したい</label></p>
+                    <p><label><input type="checkbox" name="inquiry" id="inquiry" value="inquiry" required>クライアントへ提案したい</label></p>
                 </div>
-                <div>
-                    <p>課題を解決する<span>2</span>つのポイント</p>
-                    <ul>
-                        <li>否認された項目に否認理由を明記</li>
-                        <li>AIによる修正内容のレコメンド</li>
-                    </ul>
-                </div>
+                <p>
+                    <label for="question">その他にご質問や不明点などがございましたらご記入ください</label>
+                    <textarea name="question" id="question"></textarea>
+                </p>
+            <p class="tc"><a href="" target="blank">個人情報の取り扱い<i class="fas fa-external-link-alt"></i></a>に同意したものとします。</p>
+            <div class="detail-link detail-link-inq">
+                <input type="submit" name="send" value="確認画面へ">
             </div>
-            <p>KESSAIでは、否認された項目に対して否認理由が明記されます。また、AIにより否認理由を分析・レコメンドし、最適な申請書の作成をサポートします。</p>
+            </form>
         </div>
-    </div>
-    <div class="contact-contents">
-        <h3><span>お問い合わせ</span></h3>
-        <h4>決裁管理システムKESSAIに関する
-            <br>ご相談はこちら</h4>
-        <p>気になること、お気軽にご相談ください。
-            <br>弊社スタッフが詳しくご説明いたします。</p>
-        <div class="contact-cta">
-            <a href="">お問い合わせはこちら<i class="fas fa-chevron-right fa-size"></i></a>
-        </div>
-    </div>
     </div>
     <div class="page-bottom">
         <div class="bottom-container">
@@ -149,9 +158,8 @@
     <!-- ハンバーガーメニュー-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!--自作のJS-->
-    <script src="../js/script.js"></script>
+    <script src="js/script.js"></script>
     <!-- end ハンバーガーメニュー-->
-</body>
 </body>
 
 </html>

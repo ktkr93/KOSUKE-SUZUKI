@@ -26,7 +26,7 @@
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="noindex,nofollow">
-    <title>決裁管理システムKESSAIの特長を網羅！特長紹介資料</title>
+    <title>お問い合わせ</title>
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" type="text/css" href="css/destyle.css">
     <link rel="stylesheet" type="text/css" href="css/common_sp.css">
@@ -37,13 +37,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
-<body class="doc">
+<body class="inquiry">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W76H9PT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="page-header">
-        <div class="header-inner">
+        <div class="header-container">
+            <div class="header-inner">
                 <div>
                     <a href="index.html">
                         <h1>KESSAI</h1>
@@ -72,13 +73,13 @@
     </header>
     <div class="page-demo-heading">
         <div class="demo-heading-container">
-            <h2>決裁管理システムKESSAIの特長を網羅！特長紹介資料</h2>
+            <h2>お問い合わせ</h2>
         </div>
     </div>
     <div class="page-demo-main">
         <div class="demo-main-container">
             <p class="demo-main-heading">KESSAIの特長紹介資料をご希望の方は、以下のフォームに必要事項をご入力ください。</p>
-            <form id="form" class="form" action="#">
+            <form id="form" class="form" action="confirm.php" method="post">
                 <p>
                     <label for="company"><span class="required">必須</span>会社名</label><br>
                     <input type="text" name="company" id="company" placeholder="KESSAI株式会社" required>
@@ -100,42 +101,47 @@
                     <input type="email" name="email" id="email" placeholder="taro@kessai.com" required>
                 </p>
                 <div class="checkbox">
-                    <label class="checkbox-inq" for="inquiry"><span class="required">必須</span>お問い合わせの理由</label><br>
-                    <p><label><input type="checkbox" name="inquiry" id="inquiry" value="inquiry" required>資料を希望したい</label></p>
-                    <p><label><input type="checkbox" name="inquiry" id="inquiry" value="inquiry" required>自社採用したい</label></p>
-                    <p><label><input type="checkbox" name="inquiry" id="inquiry" value="inquiry" required>クライアントへ提案したい</label></p>
+                    <label class="checkbox-inq" for="inquiry">お問い合わせの理由</label><br>
+                    <p><label><input type="checkbox" name="inquiry01" id="inquiry01" value="inquiry01">質問したい<label></p>
+                    <p><label><input type="checkbox" name="inquiry02" id="inquiry02" value="inquiry02">資料を希望したい</label></p>
+                    <p><label><input type="checkbox" name="inquiry03" id="inquiry03" value="inquiry03">自社採用したい</label></p>
+                    <p><label><input type="checkbox" name="inquiry04" id="inquiry04" value="inquiry04">クライアントへ提案したい</label></p>
                 </div>
                 <p>
                     <label for="question">その他にご質問や不明点などがございましたらご記入ください</label>
                     <textarea name="question" id="question"></textarea>
                 </p>
+                <p class="tc"><a href="" target="blank">個人情報の取り扱い<i class="fas fa-external-link-alt"></i></a>に同意したものとします。</p>
+                <input class="inq-send" type="submit" name="send" value="確認画面へ">
             </form>
-            <p class="tc"><a href="" target="blank">個人情報の取り扱い<i class="fas fa-external-link-alt"></i></a>に同意したものとします。</p>
-            <div class="detail-link detail-link-inq">
-                <a href="">問い合わせる</a>
-            </div>
         </div>
     </div>
     <div class="page-bottom">
         <div class="bottom-container">
-            <ul>
-                <li class="bottom-heading">ホーム</li>
-                <li class="bottom-heading">KESSAIにできること
-                    <br>～こんなお悩みありませんか？～</li>
-                <ul>
-                    <li><a href="problems/problem01.html">申請書を作るのがめんどくさい・・・</a></li>
-                    <li><a href="problems/problem02.html">一日に何度も承認するのに時間がかかりすぎる</a></li>
-                    <li><a href="problems/problem03.html">一日に何度も承認するのに時間がかかりすぎる</a></li>
-                    <li><a href="problems/problem04.html">申請した決裁がなかなか承認されない・・・</a></li>
-                </ul>
-                <li class="bottom-heading">KESSAIの機能</li>
-                <ul>
-                    <li><a href="feature.html">シンプルなフォーム</a></li>
-                    <li><a href="feature.html">フロー管理</a></li>
-                    <li><a href="feature.html">追っかけ機能</a></li>
-                    <li><a href="feature.html">アラート機能</a></li>
-                </ul>
-                <li class="bottom-heading">お知らせ</li>
+            <ul class="bottom-box">
+                <div>
+                    <li class="bottom-heading">ホーム</li>
+                    <li class="bottom-heading">KESSAIにできること
+                        <br>～こんなお悩みありませんか？～</li>
+                    <ul>
+                        <li><a href="problems/problem01.html">申請書を作るのがめんどくさい・・・</a></li>
+                        <li><a href="problems/problem02.html">一日に何度も承認するのに時間がかかりすぎる</a></li>
+                        <li><a href="problems/problem03.html">一日に何度も承認するのに時間がかかりすぎる</a></li>
+                        <li><a href="problems/problem04.html">申請した決裁がなかなか承認されない・・・</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <li class="bottom-heading">KESSAIの機能</li>
+                    <ul>
+                        <li><a href="feature.html">シンプルなフォーム</a></li>
+                        <li><a href="feature.html">フロー管理</a></li>
+                        <li><a href="feature.html">追っかけ機能</a></li>
+                        <li><a href="feature.html">アラート機能</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <li class="bottom-heading"><a href="feature.html">お知らせ</a></li>
+                </div>
             </ul>
         </div>
     </div>
@@ -152,7 +158,6 @@
     <!--自作のJS-->
     <script src="js/script.js"></script>
     <!-- end ハンバーガーメニュー-->
-</body>
 </body>
 
 </html>
