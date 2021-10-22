@@ -71,13 +71,9 @@ input[type="email"] {
     margin-bottom: 4px;
 }
 
-.checkbox label {
-    margin-bottom: 0;
-    font-weight: normal;
-}
-
 input[type="checkbox"] {
-    margin-right: 10px;
+    margin: 0 10px 0 0;
+    font-weight: normal
 }
 
 textarea {
@@ -100,18 +96,22 @@ textarea {
     font-size: .875rem;
 }
 
+form .detail-link {
+    margin-bottom: 40px;
+}
+
 .inq-back,
 .inq-send {
     margin-bottom: 60px;
     width: 100%;
     padding: 18px 0;
     color: #fff;
-    background-color: #18B7CD;
+    background-color: #747474;
     border-radius: 14px;
     text-align: center;
 }
 
-.inq-back {
+.inq-send {
     margin-bottom: 20px;
-    background-color: #747474;
+    background-color: #18B7CD;
 }

@@ -39,8 +39,7 @@
 
 <body class="inquiry">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W76H9PT"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W76H9PT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="page-header">
         <div class="header-container">
@@ -102,10 +101,10 @@
                 </p>
                 <div class="checkbox">
                     <label class="checkbox-inq" for="inquiry">お問い合わせの理由</label><br>
-                    <p><label><input type="checkbox" name="inquiry01" id="inquiry01" value="inquiry01">質問したい<label></p>
-                    <p><label><input type="checkbox" name="inquiry02" id="inquiry02" value="inquiry02">資料を希望したい</label></p>
-                    <p><label><input type="checkbox" name="inquiry03" id="inquiry03" value="inquiry03">自社採用したい</label></p>
-                    <p><label><input type="checkbox" name="inquiry04" id="inquiry04" value="inquiry04">クライアントへ提案したい</label></p>
+                    <p><input type="checkbox" name="inquiry[]" id="inquiry01" value="質問したい">質問したい</p>
+                    <p><input type="checkbox" name="inquiry[]" id="inquiry02" value="資料を希望したい">資料を希望したい</p>
+                    <p><input type="checkbox" name="inquiry[]" id="inquiry03" value="自社採用したい">自社採用したい</p>
+                    <p><input type="checkbox" name="inquiry[]" id="inquiry04" value="クライアントへ提案したい">クライアントへ提案したい</p>
                 </div>
                 <p>
                     <label for="question">その他にご質問や不明点などがございましたらご記入ください</label>
@@ -122,7 +121,8 @@
                 <div>
                     <li class="bottom-heading">ホーム</li>
                     <li class="bottom-heading">KESSAIにできること
-                        <br>～こんなお悩みありませんか？～</li>
+                        <br>～こんなお悩みありませんか？～
+                    </li>
                     <ul>
                         <li><a href="problems/problem01.html">申請書を作るのがめんどくさい・・・</a></li>
                         <li><a href="problems/problem02.html">一日に何度も承認するのに時間がかかりすぎる</a></li>
@@ -149,7 +149,8 @@
         <div class="footer-container">
             <p class="address">KESSAI株式会社
                 <br>東京都千代田区千代田
-                <br>千代田ビル</p>
+                <br>千代田ビル
+            </p>
             <p class="copyright">Copyright © 2021 KESSAI inc.</p>
         </div>
     </footer>

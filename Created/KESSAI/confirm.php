@@ -1,10 +1,15 @@
 <?php
-    $company = isset($_POST["company"])? $_POST["company"] : "";
-    $name = isset($_POST["name"])? $_POST["name"] : "";
-    $division = isset($_POST["division"])? $_POST["division"] : "";
-    $tel = isset($_POST["tel"])? $_POST["tel"] : "";
-    $email = isset($_POST["email"])? $_POST["email"] : "";
-    $question = isset($_POST["question"])? $_POST["question"] : "";
+$company = isset($_POST["company"]) ? $_POST["company"] : "";
+$name = isset($_POST["name"]) ? $_POST["name"] : "";
+$division = isset($_POST["division"]) ? $_POST["division"] : "";
+$tel = isset($_POST["tel"]) ? $_POST["tel"] : "";
+$email = isset($_POST["email"]) ? $_POST["email"] : "";
+
+if (isset($_POST["inquiry"]) && is_array($_POST["inquiry"])) {
+    $inquiry = implode("、", $_POST["inquiry"]);
+}
+
+$question = isset($_POST["question"]) ? $_POST["question"] : "";
 ?>
 
 <!DOCTYPE html>
@@ -48,8 +53,7 @@
 
 <body class="confirm">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W76H9PT"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W76H9PT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="page-header">
         <div class="header-container">
@@ -88,39 +92,44 @@
     <div class="page-demo-main">
         <div class="demo-main-container">
             <p class="demo-main-heading">KESSAIの特長紹介資料をご希望の方は、以下のフォームに必要事項をご入力ください。</p>
-            <form id="form" class="form" action="confirm.php" method="post">
-            <input type="hidden" name="company" value="<?php echo htmlspecialchars($company,ENT_QUOTES,"UTF-8"); ?>">
-            <input type="hidden" name="name" value="<?php echo htmlspecialchars($name,ENT_QUOTES,"UTF-8"); ?>">
-            <input type="hidden" name="division" value="<?php echo htmlspecialchars($division,ENT_QUOTES,"UTF-8"); ?>">
-            <input type="hidden" name="tel" value="<?php echo htmlspecialchars($tel,ENT_QUOTES,"UTF-8"); ?>">
-            <input type="hidden" name="email" value="<?php echo htmlspecialchars($email,ENT_QUOTES,"UTF-8"); ?>">
-            <input type="hidden" name="question" value="<?php echo htmlspecialchars($question,ENT_QUOTES,"UTF-8"); ?>">
-            <p>
+            <form id="form" class="form" action="complete.php" method="post">
+                <input type="hidden" name="company" value="<?php echo htmlspecialchars($company, ENT_QUOTES, "UTF-8"); ?>">
+                <input type="hidden" name="name" value="<?php echo htmlspecialchars($name, ENT_QUOTES, "UTF-8"); ?>">
+                <input type="hidden" name="division" value="<?php echo htmlspecialchars($division, ENT_QUOTES, "UTF-8"); ?>">
+                <input type="hidden" name="tel" value="<?php echo htmlspecialchars($tel, ENT_QUOTES, "UTF-8"); ?>">
+                <input type="hidden" name="email" value="<?php echo htmlspecialchars($email, ENT_QUOTES, "UTF-8"); ?>">
+                <input type="hidden" name="inquiry" value="<?php echo htmlspecialchars($inquiry, ENT_QUOTES, "UTF-8"); ?>">
+                <input type="hidden" name="question" value="<?php echo htmlspecialchars($question, ENT_QUOTES, "UTF-8"); ?>">
+                <p>
                     <label for="company"><span class="required">必須</span>会社名</label><br>
-                    <?php echo htmlspecialchars($company,ENT_QUOTES,"UTF-8"); ?>
+                    <?php echo htmlspecialchars($company, ENT_QUOTES, "UTF-8"); ?>
                 </p>
                 <p>
                     <label for="name"><span class="required">必須</span>お名前</label><br>
-                    <?php echo htmlspecialchars($name,ENT_QUOTES,"UTF-8"); ?>
+                    <?php echo htmlspecialchars($name, ENT_QUOTES, "UTF-8"); ?>
                 </p>
                 <p>
                     <label for="division"><span class="required">必須</span>部署</label><br>
-                    <?php echo htmlspecialchars($division,ENT_QUOTES,"UTF-8"); ?>
+                    <?php echo htmlspecialchars($division, ENT_QUOTES, "UTF-8"); ?>
                 </p>
                 <p>
                     <label for="tel"><span class="required">必須</span>電話番号</label><br>
-                    <?php echo htmlspecialchars($tel,ENT_QUOTES,"UTF-8"); ?>
+                    <?php echo htmlspecialchars($tel, ENT_QUOTES, "UTF-8"); ?>
                 </p>
                 <p>
                     <label for="email"><span class="required">必須</span>メールアドレス</label><br>
-                    <?php echo htmlspecialchars($email,ENT_QUOTES,"UTF-8"); ?>
+                    <?php echo htmlspecialchars($email, ENT_QUOTES, "UTF-8"); ?>
                 </p>
+                <div class="checkbox">
+                    <label class="checkbox-inq" for="inquiry">お問い合わせの理由</label><br>
+                    <?php echo htmlspecialchars($inquiry, ENT_QUOTES, "UTF-8"); ?>
+                </div>
                 <p>
-                    <label for="question">その他にご質問や不明点などがございましたらご記入ください</label>
-                    <?php echo htmlspecialchars($question,ENT_QUOTES,"UTF-8"); ?>
+                    <label for="question">その他にご質問や不明点などがございましたらご記入ください</label><br>
+                    <?php echo htmlspecialchars($question, ENT_QUOTES, "UTF-8"); ?>
                 </p>
-                <input class="inq-back" type="button" value="戻る" onClick="history.back()">
                 <input class="inq-send" type="submit" name="send" value="送信する">
+                <input class="inq-back" type="button" value="戻る" onClick="history.back()">
             </form>
         </div>
     </div>
@@ -130,7 +139,8 @@
                 <div>
                     <li class="bottom-heading">ホーム</li>
                     <li class="bottom-heading">KESSAIにできること
-                        <br>～こんなお悩みありませんか？～</li>
+                        <br>～こんなお悩みありませんか？～
+                    </li>
                     <ul>
                         <li><a href="problems/problem01.html">申請書を作るのがめんどくさい・・・</a></li>
                         <li><a href="problems/problem02.html">一日に何度も承認するのに時間がかかりすぎる</a></li>
@@ -157,7 +167,8 @@
         <div class="footer-container">
             <p class="address">KESSAI株式会社
                 <br>東京都千代田区千代田
-                <br>千代田ビル</p>
+                <br>千代田ビル
+            </p>
             <p class="copyright">Copyright © 2021 KESSAI inc.</p>
         </div>
     </footer>
