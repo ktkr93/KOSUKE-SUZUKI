@@ -1,0 +1,63 @@
+.privacy .page-privacy,
+.privacy-text {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+
+.privacy .header-container {
+    margin-bottom: 18px;
+}
+
+.privacy-container {
+    max-width: 1140px;
+    margin: 0 auto 35px auto;
+    padding: 0 4%;
+    text-align: center;
+}
+
+.privacy-container h2 {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.privacy-text-container {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 4% 30px 4%;
+}
+
+.privacy-text-container h3,
+.privacy-text-container p {
+    text-align: left;
+}
+
+.privacy-text-container h3::before,
+.privacy-text-container h3::after {
+    content: none;
+}
+
+.privacy-text-container h3 {
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.privacy-text-container p {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.privacy-text-container ol {
+    margin: 20px 0 0 40px;
+}
+
+.privacy-text-container ol li {
+    list-style: outside decimal;
+    font-size: 0.95rem;
+    line-height: 140%;
+    margin: 10px 0 0 0;
+}
+
+.privacy-text-container p a {
+    color: #488dfc;
+    text-decoration: underline;
+}

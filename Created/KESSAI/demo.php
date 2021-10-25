@@ -26,7 +26,7 @@
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="noindex,nofollow">
-    <title>お問い合わせ</title>
+    <title>無料デモお申し込み</title>
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" type="text/css" href="css/destyle.css">
     <link rel="stylesheet" type="text/css" href="css/common_sp.css">
@@ -37,7 +37,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
-<body class="inquiry">
+<body class="demo">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W76H9PT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -72,13 +72,13 @@
     </header>
     <div class="page-demo-heading">
         <div class="demo-heading-container">
-            <h2>お問い合わせ</h2>
+            <h2>無料デモお申し込み</h2>
         </div>
     </div>
     <div class="page-demo-main">
         <div class="demo-main-container">
-            <p class="demo-main-heading">お問い合わせをご希望の方は、以下のフォームに必要事項をご入力ください。</p>
-            <form id="form" class="form" action="inquiry-confirm.php" method="post">
+            <p class="demo-main-heading">KESSAIの無料デモをご希望の方は、以下のフォームに必要事項をご入力ください。</p>
+            <form id="form" class="form" action="demo-confirm.php" method="post">
                 <p>
                     <label for="company"><span class="required">必須</span>会社名</label><br>
                     <input type="text" name="company" id="company" placeholder="KESSAI株式会社" required>
@@ -101,10 +101,18 @@
                 </p>
                 <div class="checkbox">
                     <label class="checkbox-inq" for="inquiry">お問い合わせの理由</label><br>
-                    <p><input type="checkbox" name="inquiry[]" id="inquiry01" value="質問したい">質問したい</p>
-                    <p><input type="checkbox" name="inquiry[]" id="inquiry02" value="資料を希望したい">資料を希望したい</p>
-                    <p><input type="checkbox" name="inquiry[]" id="inquiry03" value="自社採用したい">自社採用したい</p>
-                    <p><input type="checkbox" name="inquiry[]" id="inquiry04" value="クライアントへ提案したい">クライアントへ提案したい</p>
+                    <p>
+                        <input type="checkbox" name="inquiry[]" id="inquiry01" value="質問したい">質問したい
+                    </p>
+                    <p>
+                        <input type="checkbox" name="inquiry[]" id="inquiry02" value="資料を希望したい">資料を希望したい
+                    </p>
+                    <p>
+                        <input type="checkbox" name="inquiry[]" id="inquiry03" value="自社採用したい">自社採用したい
+                    </p>
+                    <p>
+                        <input type="checkbox" name="inquiry[]" id="inquiry04" value="クライアントへ提案したい">クライアントへ提案したい
+                    </p>
                 </div>
                 <p>
                     <label for="question">その他にご質問や不明点などがございましたらご記入ください</label>
@@ -116,6 +124,7 @@
                 <input class="inq-send" type="submit" name="send" value="確認画面へ">
             </form>
         </div>
+    </div>
     </div>
     <div class="page-bottom">
         <div class="bottom-container">
@@ -161,6 +170,7 @@
     <!--自作のJS-->
     <script src="js/script.js"></script>
     <!-- end ハンバーガーメニュー-->
+</body>
 </body>
 
 </html>

@@ -1,3 +1,16 @@
+<?php
+$company = isset($_POST["company"]) ? $_POST["company"] : "";
+$name = isset($_POST["name"]) ? $_POST["name"] : "";
+$division = isset($_POST["division"]) ? $_POST["division"] : "";
+$tel = isset($_POST["tel"]) ? $_POST["tel"] : "";
+$email = isset($_POST["email"]) ? $_POST["email"] : "";
+
+if (isset($_POST["inquiry"]) && is_array($_POST["inquiry"])) {
+    $inquiry = implode("、", $_POST["inquiry"]);
+}
+
+$question = isset($_POST["question"]) ? $_POST["question"] : "";
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -26,7 +39,7 @@
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="noindex,nofollow">
-    <title>お問い合わせ</title>
+    <title>無料デモお申し込み</title>
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" type="text/css" href="css/destyle.css">
     <link rel="stylesheet" type="text/css" href="css/common_sp.css">
@@ -37,7 +50,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
-<body class="inquiry">
+<body class="demo">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W76H9PT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -72,48 +85,50 @@
     </header>
     <div class="page-demo-heading">
         <div class="demo-heading-container">
-            <h2>お問い合わせ</h2>
+            <h2>無料デモお申し込み</h2>
         </div>
     </div>
     <div class="page-demo-main">
         <div class="demo-main-container">
-            <p class="demo-main-heading">お問い合わせをご希望の方は、以下のフォームに必要事項をご入力ください。</p>
-            <form id="form" class="form" action="inquiry-confirm.php" method="post">
+            <p class="demo-main-heading">KESSAIの無料デモをご希望の方は、以下のフォームに必要事項をご入力ください。</p>
+            <form id="form" class="form" action="demo-complete.php" method="post">
+                <input type="hidden" name="company" value="<?php echo htmlspecialchars($company, ENT_QUOTES, " UTF-8 "); ?>">
+                <input type="hidden" name="name" value="<?php echo htmlspecialchars($name, ENT_QUOTES, " UTF-8 "); ?>">
+                <input type="hidden" name="division" value="<?php echo htmlspecialchars($division, ENT_QUOTES, " UTF-8 "); ?>">
+                <input type="hidden" name="tel" value="<?php echo htmlspecialchars($tel, ENT_QUOTES, " UTF-8 "); ?>">
+                <input type="hidden" name="email" value="<?php echo htmlspecialchars($email, ENT_QUOTES, " UTF-8 "); ?>">
+                <input type="hidden" name="inquiry" value="<?php echo htmlspecialchars($inquiry, ENT_QUOTES, " UTF-8 "); ?>">
+                <input type="hidden" name="question" value="<?php echo htmlspecialchars($question, ENT_QUOTES, " UTF-8 "); ?>">
                 <p>
                     <label for="company"><span class="required">必須</span>会社名</label><br>
-                    <input type="text" name="company" id="company" placeholder="KESSAI株式会社" required>
+                    <?php echo htmlspecialchars($company, ENT_QUOTES, "UTF-8"); ?>
                 </p>
                 <p>
                     <label for="name"><span class="required">必須</span>お名前</label><br>
-                    <input type="text" name="name" id="name" placeholder="決裁 太郎" required>
+                    <?php echo htmlspecialchars($name, ENT_QUOTES, "UTF-8"); ?>
                 </p>
                 <p>
                     <label for="division"><span class="required">必須</span>部署</label><br>
-                    <input type="text" name="division" id="division" placeholder="マーケティング ディビジョン" required>
+                    <?php echo htmlspecialchars($division, ENT_QUOTES, "UTF-8"); ?>
                 </p>
                 <p>
                     <label for="tel"><span class="required">必須</span>電話番号</label><br>
-                    <input type="tel" name="tel" id="tel" placeholder="08012345678" required>
+                    <?php echo htmlspecialchars($tel, ENT_QUOTES, "UTF-8"); ?>
                 </p>
                 <p>
                     <label for="email"><span class="required">必須</span>メールアドレス</label><br>
-                    <input type="email" name="email" id="email" placeholder="taro@kessai.com" required>
+                    <?php echo htmlspecialchars($email, ENT_QUOTES, "UTF-8"); ?>
                 </p>
                 <div class="checkbox">
                     <label class="checkbox-inq" for="inquiry">お問い合わせの理由</label><br>
-                    <p><input type="checkbox" name="inquiry[]" id="inquiry01" value="質問したい">質問したい</p>
-                    <p><input type="checkbox" name="inquiry[]" id="inquiry02" value="資料を希望したい">資料を希望したい</p>
-                    <p><input type="checkbox" name="inquiry[]" id="inquiry03" value="自社採用したい">自社採用したい</p>
-                    <p><input type="checkbox" name="inquiry[]" id="inquiry04" value="クライアントへ提案したい">クライアントへ提案したい</p>
+                    <?php echo htmlspecialchars($inquiry, ENT_QUOTES, "UTF-8"); ?>
                 </div>
                 <p>
-                    <label for="question">その他にご質問や不明点などがございましたらご記入ください</label>
-                    <textarea name="question" id="question"></textarea>
+                    <label for="question">その他にご質問や不明点などがございましたらご記入ください</label><br>
+                    <?php echo htmlspecialchars($question, ENT_QUOTES, "UTF-8"); ?>
                 </p>
-                <p>
-                    <input type="checkbox" id="inquiry01" value="プライバシーポリシーに同意する" required><a href="privacy.html" target="blank">プライバシーポリシー<i class="fas fa-external-link-alt"></i></a>に同意する
-                </p>
-                <input class="inq-send" type="submit" name="send" value="確認画面へ">
+                <input class="inq-send" type="submit" name="send" value="送信する">
+                <input class="inq-back" type="button" value="戻る" onClick="history.back()">
             </form>
         </div>
     </div>
@@ -153,8 +168,7 @@
                 <br>東京都千代田区千代田
                 <br>千代田ビル
             </p>
-            <p class="copyright">Copyright © 2021 KESSAI inc.</p>
-        </div>
+            <p class="copyright">Copyright © 2021 KESSAI inc.</p>        </div>
     </footer>
     <!-- ハンバーガーメニュー-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

@@ -1,25 +1,3 @@
-<?php
-mb_language("japanese");
-mb_internal_encoding("UTF-8");
-
-$to = $_POST["email"];
-$subject = "お問い合わせいただきありがとうございます。";
-$header = "From: info@kessai.com";
-$header .= "\n";
-$header .= "Bcc: ktkr93@gmail.com";
-$message = "お問い合わせいただきありがとうございます。" . "\n" .
-    "以下の通りにお問い合わせ内容を受け付けました。" . "\n" . "\n" .
-    "会社名｜" . $_POST["company"] . "\n" .
-    "お名前｜" . $_POST["name"] . "\n" .
-    "部署｜" . $_POST["division"] . "\n" .
-    "電話番号｜" . $_POST["tel"] . "\n" .
-    "メールアドレス｜" . $_POST["email"] . "\n" .
-    "問い合わせの理由｜" . $_POST["inquiry"] . "\n" .
-    "その他にご質問や不明点などがございましたらご記入ください｜" . $_POST["question"];
-
-mb_send_mail($to, $subject, $message, $header);
-?>
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -48,7 +26,7 @@ mb_send_mail($to, $subject, $message, $header);
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="noindex,nofollow">
-    <title>お問い合わせ</title>
+    <title>決裁管理システムKESSAIの特長を網羅！特長紹介資料</title>
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" type="text/css" href="css/destyle.css">
     <link rel="stylesheet" type="text/css" href="css/common_sp.css">
@@ -59,7 +37,7 @@ mb_send_mail($to, $subject, $message, $header);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
-<body class="complete">
+<body class="doc">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W76H9PT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -94,46 +72,47 @@ mb_send_mail($to, $subject, $message, $header);
     </header>
     <div class="page-demo-heading">
         <div class="demo-heading-container">
-            <h2>お問い合わせ</h2>
+            <h2>決裁管理システムKESSAIの特長を網羅！特長紹介資料</h2>
         </div>
     </div>
     <div class="page-demo-main">
         <div class="demo-main-container">
-            <p class="demo-main-heading"><?php echo $_POST["email"] ?>様、お問い合わせありがとうございます。
-                <br>以下のお問い合わせ内容を、メールにて確認させていただきました。
-            </p>
-            <form id="form" class="form" action="#">
+            <p class="demo-main-heading">KESSAIの特長紹介資料をご希望の方は、以下のフォームに必要事項をご入力ください。</p>
+            <form id="form" class="form" action="doc-confirm.php" method="post">
                 <p>
-                    <label for="company">会社名</label><br>
-                    <?php echo $_POST["company"] ?>
+                    <label for="company"><span class="required">必須</span>会社名</label><br>
+                    <input type="text" name="company" id="company" placeholder="KESSAI株式会社" required>
                 </p>
                 <p>
-                    <label for="name">お名前</label><br>
-                    <?php echo $_POST["name"] ?>
+                    <label for="name"><span class="required">必須</span>お名前</label><br>
+                    <input type="text" name="name" id="name" placeholder="決裁 太郎" required>
                 </p>
                 <p>
-                    <label for="division">部署</label><br>
-                    <?php echo $_POST["division"] ?>
+                    <label for="division"><span class="required">必須</span>部署</label><br>
+                    <input type="text" name="division" id="division" placeholder="マーケティング ディビジョン" required>
                 </p>
                 <p>
-                    <label for="tel">電話番号</label><br>
-                    <?php echo $_POST["tel"] ?>
+                    <label for="tel"><span class="required">必須</span>電話番号</label><br>
+                    <input type="tel" name="tel" id="tel" placeholder="08012345678" required>
                 </p>
                 <p>
-                    <label for="email">メールアドレス</label><br>
-                    <?php echo $_POST["email"] ?>
+                    <label for="email"><span class="required">必須</span>メールアドレス</label><br>
+                    <input type="email" name="email" id="email" placeholder="taro@kessai.com" required>
                 </p>
                 <div class="checkbox">
                     <label class="checkbox-inq" for="inquiry">お問い合わせの理由</label><br>
-                    <?php echo $_POST["inquiry"] ?>
+                    <p><input type="checkbox" name="inquiry[]" id="inquiry02" value="資料を希望したい">資料を希望したい</p>
+                    <p><input type="checkbox" name="inquiry[]" id="inquiry03" value="自社採用したい">自社採用したい</p>
+                    <p><input type="checkbox" name="inquiry[]" id="inquiry04" value="クライアントへ提案したい">クライアントへ提案したい</p>
                 </div>
                 <p>
-                    <label for="question">その他にご質問や不明点などがございましたらご記入ください</label><br>
-                    <?php echo $_POST["question"] ?>
+                    <label for="question">その他にご質問や不明点などがございましたらご記入ください</label>
+                    <textarea name="question" id="question"></textarea>
                 </p>
-                <div class="detail-link">
-                    <a href="index.html">ホームへ戻る</a>
-                </div>
+                <p>
+                    <input type="checkbox" id="inquiry01" value="プライバシーポリシーに同意する" required><a href="privacy.html" target="blank">プライバシーポリシー<i class="fas fa-external-link-alt"></i></a>に同意する
+                </p>
+                <input class="inq-send" type="submit" name="send" value="確認画面へ">
             </form>
         </div>
     </div>
@@ -181,6 +160,7 @@ mb_send_mail($to, $subject, $message, $header);
     <!--自作のJS-->
     <script src="js/script.js"></script>
     <!-- end ハンバーガーメニュー-->
+</body>
 </body>
 
 </html>
