@@ -1,0 +1,67 @@
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.8rem;
+    }
+    h1,
+    h2 {
+        letter-spacing: .4rem;
+    }
+    h3 {
+        letter-spacing: .275rem;
+    }
+    a[href^="tel:"] {
+        pointer-events: none;
+    }
+    p {
+        letter-spacing: .1rem;
+    }
+    header {
+        top: 40px;
+        left: 40px;
+    }
+    /**
+ * ***************************************
+ * メインコンテナ
+ * ***************************************
+ */
+    /*768px以下は現在地表示のテキストを非表示*/
+    .pagination a .hover-text {
+        display: block;
+    }
+    .KV {
+        background: url(../images/man_yellowparka.png) no-repeat center -600px;
+        background-size: cover;
+    }
+    .WC {
+        background: url(../images/woman_setup.png) no-repeat center -180px;
+        background-size: cover;
+    }
+    .MC {
+        background: url(../images/man_denimjacket.png) no-repeat center -100px;
+        background-size: cover;
+    }
+    .WC-container a,
+    .MC-container a {
+        padding: 3% 5%;
+    }
+    .vs01 {
+        background: url(../images/woman_coat.png) no-repeat center -600px;
+        background-size: cover;
+    }
+    .vs02 {
+        background: url(../images/man_brownjacket.png) no-repeat center -510px;
+        background-size: cover;
+    }
+    .vf01 {
+        background: url(../images/woman_browncoat.png) no-repeat center -600px;
+        background-size: cover;
+    }
+    /**
+ * ***************************************
+ * フッターコンテナ
+ * ***************************************
+ */
+}
