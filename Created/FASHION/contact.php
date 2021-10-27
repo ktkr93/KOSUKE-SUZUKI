@@ -26,12 +26,11 @@
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="noindex,nofollow">
-    <title>FASHION</title>
+    <title>CONTACT</title>
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="css/destyle.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="canonical" href="https://suzukikosuke.com/Created/FASHION/">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,20 +39,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
-<body class="top">
+<body class="contact-page">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W76H9PT"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W76H9PT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <!-- splash -->
-    <div id="splash">
-        <div id="splash-logo">
-            <p>loading...</p>
-        </div>
-        <!--/splash-->
-    </div>
-    <div class="splashbg"></div>
-    <!-- end splash -->
     <header id="header">
         <div class="header-container">
             <a href="index.html">
@@ -61,48 +50,39 @@
             </a>
         </div>
     </header>
-    <div class="main">
-        <div class="main-container">
-            <div class="KV box" data-section-name="FASHION 2021 AW COLLECTION">
-                <div class="KV-container">
-                    <h2>FASHION 2021
-                        <br>AW COLLECTION</h2>
-                </div>
-            </div>
-            <div id="WC" class="WC box" data-section-name="WOMEN’S COLLECTION">
-                <div class="WC-container">
-                    <a href="WOMENS-COLLECTION.html">
-                        <h3>WOMEN’S COLLECTION<i class="fas fa-chevron-right fa-size"></i></h3>
-                    </a>
-                </div>
-            </div>
-            <div class="MC box" data-section-name="MEN’S COLLECTION">
-                <div class="MC-container">
-                    <a href="MENS-COLLECTION.html">
-                        <h3>MEN’S COLLECTION<i class="fas fa-chevron-right fa-size"></i></h3>
-                    </a>
-                </div>
-            </div>
-            <div id="vs" class="vs box" data-section-name="WOMEN’S&MEN'S">
-                <div class="vs01">
-                    <div class="vs01-inner">
-
-                    </div>
-                </div>
-                <div class="vs02">
-                    <div class="vs01-inner">
-
-                    </div>
-                </div>
-            </div>
-            <div class="vf01 box" data-section-name="WOMEN’S">
-                <div class="vf-container">
-
-                </div>
-            </div>
+    <div class="contact-heading">
+        <div class="contact-heading-container">
+            <h2>CONTACT</h2>
         </div>
     </div>
-    <footer id="footer-top">
+    <div class="contact-main">
+        <div class="contact-main-container">
+            <p class="contact-main-heading">以下のフォームに必要事項をご入力ください。</p>
+            <form id="form" class="form" action="confirm.php" method="post">
+                <p>
+                    <label for="name"><span class="required">必須</span>お名前</label><br>
+                    <input type="text" name="name" id="name" placeholder="Anne Jacqueline Hathaway" required>
+                </p>
+                <p>
+                    <label for="tel"><span class="required">必須</span>電話番号</label><br>
+                    <input type="tel" name="tel" id="tel" placeholder="08012345678" required>
+                </p>
+                <p>
+                    <label for="email"><span class="required">必須</span>メールアドレス</label><br>
+                    <input type="email" name="email" id="email" placeholder="mail@fashion.com" required>
+                </p>
+                <p>
+                    <label for="question"><span class="required">必須</span>お問い合わせ内容をご記入ください</label>
+                    <textarea name="question" id="question" required></textarea>
+                </p>
+                <p>
+                    <input type="checkbox" id="inquiry01" value="プライバシーポリシーに同意する" required><a href="privacy.html" target="blank">プライバシーポリシー<i class="fas fa-external-link-alt"></i></a>に同意する
+                </p>
+                <input class="inq-send" type="submit" name="send" value="確認画面へ">
+            </form>
+        </div>
+    </div>
+    <footer id="footer">
         <div class="footer-container">
             <h2>CONTACT</h2>
             <div class="footer-text">
@@ -120,15 +100,6 @@
             </div>
         </div>
     </footer>
-    <p class="js-scroll scroll-top scrollview"><a href="#">Scroll</a></p>
-    <p class="js-pagetop scroll-top"><a href="#">Page Top</a></p>
-
-    <!--jQuery-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!--scrollify.js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
-    <!--自作のJS-->
-    <script src="js/script.js"></script>
 </body>
 
 </html>

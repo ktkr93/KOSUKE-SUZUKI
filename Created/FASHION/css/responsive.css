@@ -6,10 +6,13 @@
     /* フォント */
     
     html {
+        overflow-x: hidden;
         font-size: 14px;
     }
     
     body {
+        width: 100%;
+        overflow-x: hidden;
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: 400;
         /* Noto Sans JPのレギュラーウェイトを指定 */
@@ -120,7 +123,7 @@
     }
     /*画面遷移の後現れるコンテンツ設定*/
     
-    #header,
+    header,
     .main,
     footer {
         opacity: 0;
@@ -128,7 +131,7 @@
     }
     /*bodyにappearクラスがついたら出現*/
     
-    body.appear #header,
+    body.appear header,
     body.appear .main,
     body.appear footer {
         animation-name: PageAnimeAppear;
@@ -206,6 +209,13 @@
     .pagination a .hover-text {
         display: none;
     }
+    /**
+ * ***************************************
+ * ヘッダー
+ * ***************************************
+ *
+ * ヘッダーコンテナ
+ */
     
     header {
         z-index: 1;
@@ -220,11 +230,23 @@
     .vf-container {
         padding: 0 4%;
     }
+    /**
+ * ***************************************
+ * メインコンテナ
+ * ***************************************
+ */
+    /**
+ * ***************************************
+ * ［index.html］ホームページ
+ * ***************************************
+ */
+    /* h3 */
     
     .main-container h3 {
         font-size: 1.7rem;
         text-align: center;
     }
+    /* キービジュアル */
     
     .KV {
         background: url(../images/man_yellowparka.png) no-repeat center;
@@ -237,18 +259,21 @@
         align-items: center;
         height: inherit;
     }
+    /* WOMEN'S COLLECTION */
     
     .WC {
         background: url(../images/woman_setup.png) no-repeat center;
         background-size: cover;
         position: relative;
     }
+    /* MEN'S COLLECTION */
     
     .MC {
         background: url(../images/man_denimjacket.png) no-repeat center;
         background-size: cover;
         position: relative;
     }
+    /* WOMEN'S＆MEN'S COLLECTION アンカーリンク*/
     
     .WC-container a,
     .MC-container a {
@@ -259,6 +284,7 @@
         right: 0;
         bottom: 100px;
     }
+    /* 上下二分割のビジュアル*/
     
     .vs {
         ;
@@ -288,10 +314,221 @@
         background: url(../images/woman_browncoat.png) no-repeat center;
         background-size: cover;
     }
+    /**
+ * ***************************************
+ * ［WOMENS-COLLECTION.html］［MENS-COLLECTION.html］メインコンテナ
+ * ***************************************
+ */
+    
+    .visual-left01,
+    .visual-right01,
+    .visual-left02 {
+        width: 100%;
+        height: 550px;
+        position: relative;
+    }
+    
+    .visual-left01 img {
+        position: absolute;
+        top: -50px;
+        left: -50px;
+    }
+    
+    .visual-right01 img {
+        position: absolute;
+        top: -80px;
+        right: -50px;
+    }
+    
+    .visual-left02 img {
+        position: absolute;
+        top: -110px;
+        left: -50px;
+    }
+    /**
+ * ***************************************
+ * ［contact.php］メインコンテナ
+ * ***************************************
+ */
+    
+    .contact-page header {
+        opacity: 1;
+        position: static;
+        margin: 20px 0 20px 20px;
+    }
+    
+    .contact-page header h1 {
+        color: #000;
+    }
+    
+    .contact .header-container {
+        margin-bottom: 18px;
+    }
+    
+    .contact-heading {
+        background-color: #000;
+    }
+    
+    .contact-heading-container {
+        padding: 10% 4%;
+    }
+    
+    .contact-heading-container h2 {
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 1.7rem;
+        color: #fff;
+    }
+    
+    .contact-main-container {
+        padding: 0 4%;
+    }
+    
+    .contact-main-heading {
+        margin: 34px 0;
+        color: #000;
+    }
+    
+    input,
+    textarea,
+    label {
+        font-size: 1.14rem;
+    }
+    
+    label {
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 10px;
+        color: #000;
+        font-weight: normal;
+    }
+    
+    .form p {
+        margin: 0 0 30px 0;
+        line-height: 1.9;
+        color: #000;
+    }
+    
+    .form a {
+        text-decoration: underline;
+    }
+    
+    .required {
+        margin-right: 10px;
+        padding: 1px 16px;
+        font-size: .875rem;
+        color: #FF0000;
+        border: 1px solid #FF0000
+    }
+    
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #747474
+    }
+    
+    .checkbox {
+        margin: 0 0 30px 0;
+    }
+    
+    .checkbox .checkbox-inq {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .checkbox p {
+        margin-bottom: 4px;
+    }
+    
+    input[type="checkbox"] {
+        margin: 0 10px 0 0;
+        font-weight: normal;
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    
+    textarea {
+        width: 100%;
+        height: 6rem;
+        padding: 10px;
+        border: 1px solid #747474;
+        line-height: 1.5;
+    }
+    
+    .tc {
+        margin-bottom: 10px;
+    }
+    
+    .fas {
+        padding: 0 4px;
+    }
+    
+    .fa-external-link-alt {
+        font-size: .875rem;
+    }
+    
+    form .detail-link {
+        margin-bottom: 40px;
+    }
+    
+    .inq-back,
+    .inq-send {
+        margin-bottom: 60px;
+        width: 100%;
+        padding: 18px 0;
+        color: #fff;
+        border-radius: 14px;
+        text-align: center;
+    }
+    
+    .inq-back {
+        background-color: #747474;
+    }
+    
+    .inq-send {
+        margin-bottom: 20px;
+        background-color: #000;
+    }
+    
+    .contact-page footer {
+        opacity: 1;
+    }
+    
+    .contact-page .footer-container {
+        margin-top: 60px;
+    }
+    
+    .toTOP-link {
+        margin-bottom: 20px;
+        background-color: #000;
+        width: 100%;
+        padding: 18px 0;
+        color: #fff;
+        border-radius: 14px;
+        text-align: center;
+    }
+    
+    .toTOP-link a {
+        text-decoration: none;
+    }
+    /**
+ * ***************************************
+ * フッター
+ * ***************************************
+ *
+ * フッターコンテナ
+ */
     
     footer {
         background-color: #000;
         height: 100%;
+    }
+    
+    .WC-page footer,
+    .MC-page footer {
+        margin-top: -100px;
     }
     
     .footer-container {
@@ -326,6 +563,7 @@
     .icon-size {
         font-size: 3rem;
     }
+    /* ページトップへ戻るボタン */
     /*スクロールリンクの形状*/
     
     .scroll-top {
