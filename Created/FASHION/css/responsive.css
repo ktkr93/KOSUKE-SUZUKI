@@ -53,6 +53,99 @@
         font-size: 1.5rem;
         padding-left: .4rem;
     }
+    /*========= ローディング画面のためのCSS ===============*/
+    
+    #splash {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999999;
+        text-align: center;
+    }
+    
+    #splash-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #splash-logo p {
+        font-weight: bold;
+        color: #fff;
+    }
+    /*========= 画面遷移のためのCSS ===============*/
+    /*画面遷移アニメーション*/
+    
+    .splashbg {
+        display: none;
+    }
+    /*bodyにappearクラスがついたら出現*/
+    
+    body.appear .splashbg {
+        display: block;
+        content: "";
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: scaleY(0);
+        background-color: #000;
+        /*伸びる背景色の設定*/
+        animation-name: PageAnime;
+        animation-duration: 1.2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes PageAnime {
+        0% {
+            transform-origin: top;
+            transform: scaleY(0);
+        }
+        50% {
+            transform-origin: top;
+            transform: scaleY(1);
+        }
+        50.001% {
+            transform-origin: bottom;
+        }
+        100% {
+            transform-origin: bottom;
+            transform: scaleY(0);
+        }
+    }
+    /*画面遷移の後現れるコンテンツ設定*/
+    
+    #header,
+    .main,
+    footer {
+        opacity: 0;
+        /*はじめは透過0に*/
+    }
+    /*bodyにappearクラスがついたら出現*/
+    
+    body.appear #header,
+    body.appear .main,
+    body.appear footer {
+        animation-name: PageAnimeAppear;
+        animation-duration: .8s;
+        animation-delay: .8s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+    
+    @keyframes PageAnimeAppear {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
     /*========= ページネーションCSS ===============*/
     
     .pagination {
@@ -115,6 +208,7 @@
     }
     
     header {
+        z-index: 1;
         position: absolute;
         top: 20px;
         left: 20px;
@@ -125,7 +219,6 @@
     .MC-container,
     .vf-container {
         padding: 0 4%;
-        height: 100vh;
     }
     
     .main-container h3 {
@@ -142,6 +235,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        height: inherit;
     }
     
     .WC {
@@ -167,7 +261,7 @@
     }
     
     .vs {
-        height: 100vh;
+        ;
     }
     
     .vs01-inner,
@@ -177,7 +271,7 @@
     
     .vs01,
     .vs02 {
-        height: 50vh;
+        height: 50%;
     }
     
     .vs01 {
@@ -197,6 +291,40 @@
     
     footer {
         background-color: #000;
+        height: 100%;
+    }
+    
+    .footer-container {
+        padding: 60px 4%;
+        text-align: center;
+    }
+    
+    .footer-container h2 {
+        font-size: 2.07rem;
+        margin-bottom: 24px;
+    }
+    
+    .footer-text p {
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+    
+    .footer-text p:nth-child(1) {
+        margin-bottom: 12px;
+    }
+    
+    .footer-text p:not(:nth-child(1)) {
+        margin-bottom: 24px;
+    }
+    
+    .sns {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .icon-size {
+        font-size: 3rem;
     }
     /*スクロールリンクの形状*/
     
@@ -302,37 +430,4 @@
     _:-ms-lang(x),
     .js-pagetop a::before {
         right: 0;
-    }
-    
-    .footer-container {
-        padding: 35px 4%;
-        text-align: center;
-    }
-    
-    .footer-container h2 {
-        font-size: 2.07rem;
-        margin-bottom: 24px;
-    }
-    
-    .footer-text p {
-        font-weight: bold;
-        font-size: 1.6rem;
-    }
-    
-    .footer-text p:nth-child(1) {
-        margin-bottom: 12px;
-    }
-    
-    .footer-text p:not(:nth-child(1)) {
-        margin-bottom: 24px;
-    }
-    
-    .sns {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-    }
-    
-    .icon-size {
-        font-size: 3rem;
     }

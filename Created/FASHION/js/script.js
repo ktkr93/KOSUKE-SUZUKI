@@ -1,9 +1,10 @@
+//scrollify
 $.scrollify({
     section: ".box", //1ページスクロールさせたいエリアクラス名
-    scrollbars: "false", //スクロールバー表示・非表示設定
-    interstitialSection: "", //ヘッダーフッターを認識し、1ページスクロールさせず表示されるように設定
+    scrollbars: "true", //スクロールバー表示・非表示設定
+    interstitialSection: "#footer", //ヘッダーフッターを認識し、1ページスクロールさせず表示されるように設定
     easing: "swing", // 他にもlinearやeaseOutExpoといったjQueryのeasing指定可能
-    scrollSpeed: 600, // スクロール時の速度
+    scrollSpeed: 800, // スクロール時の速度
 
     //以下、ページネーション設定
     before: function(i, panels) {
@@ -64,4 +65,24 @@ $(window).scroll(function() {
 // ページが読み込まれたらすぐに動かしたい場合の記述
 $(window).on('load', function() {
     PageTopCheck(); /* スクロールした際の動きの関数を呼ぶ*/
+});
+
+//画面遷移
+$(window).on('load', function() {
+    $("#splash-logo").delay(800).fadeOut('slow'); //ロゴを0.8秒でフェードアウトする記述
+
+    //=====ここからローディングエリア（splashエリア）を0.8秒でフェードアウトした後に動かしたいJSをまとめる
+    $("#splash").delay(800).fadeOut('slow', function() { //ローディングエリア（splashエリア）を0.8秒でフェードアウトする記述
+
+        $('body').addClass('appear'); //フェードアウト後bodyにappearクラス付与
+
+    });
+    //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+
+    //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
+    $('.splashbg').on('animationend', function() {
+        //この中に動かしたいJSを記載
+    });
+    //=====ここまで背景が伸びた後に動かしたいJSをまとめる
+
 });
