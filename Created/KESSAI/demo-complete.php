@@ -99,8 +99,8 @@ mb_send_mail($to, $subject, $message, $header);
     <div class="page-demo-main">
         <div class="demo-main-container">
             <p class="demo-main-heading">
-            <?php echo $_POST["email"] ?>様、お問い合わせありがとうございます。
-            <br>以下のお問い合わせ内容を、メールにて確認させていただきました。
+                <?php echo $_POST["name"] ?>様、お問い合わせありがとうございます。
+                <br>以下のお問い合わせ内容を、メールにて確認させていただきました。
             </p>
             <form id="form" class="form" action="#">
                 <p>
@@ -143,7 +143,8 @@ mb_send_mail($to, $subject, $message, $header);
                 <div>
                     <li class="bottom-heading">ホーム</li>
                     <li class="bottom-heading">KESSAIにできること
-                        <br>～こんなお悩みありませんか？～</li>
+                        <br>～こんなお悩みありませんか？～
+                    </li>
                     <ul>
                         <li><a href="problems/problem01.html">申請書を作るのがめんどくさい・・・</a></li>
                         <li><a href="problems/problem02.html">一日に何度も承認するのに時間がかかりすぎる</a></li>
