@@ -16,6 +16,7 @@ $message = "お問い合わせいただきありがとうございます。" . "
 
 mb_send_mail($to, $subject, $message, $header);
 ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -71,7 +72,7 @@ mb_send_mail($to, $subject, $message, $header);
     <div class="contact-main">
         <div class="contact-main-container">
             <p class="contact-main-heading">
-                <?php echo $_POST["name"] ?>様、お問い合わせありがとうございます。
+                <?php echo $_POST["name"] ?> 様、お問い合わせいただきありがとうございます。
                 <br>以下のお問い合わせ内容を、メールにて確認させていただきました。
             </p>
             <form id="form" class="form" action="#">
@@ -104,9 +105,7 @@ mb_send_mail($to, $subject, $message, $header);
                 <a href="tel:03-0000-0000">
                     <p>TEL：03-0000-0000</p>
                 </a>
-                <a href="contact.php">
-                    <p>お問い合わせはこちら</p>
-                </a>
+                <p>お問い合わせは<a href="contact.php"><span>こちら</span></a></p>
             </div>
             <div class="sns">
                 <a href="https://about.instagram.com/ja-jp" target="blank"><i class="fab fa-instagram icon-size"></i></a>

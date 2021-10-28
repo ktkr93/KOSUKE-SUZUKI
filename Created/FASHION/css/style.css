@@ -61,6 +61,48 @@
     }
     /**
  * ***************************************
+ * ［WOMENS-COLLECTION.html］［MENS-COLLECTION.html］メインコンテナ
+ * ***************************************
+ */
+    .WC-page,
+    .MC-page {
+        background-color: #F2F5F6;
+    }
+    .main-container img {
+        max-width: 660px;
+    }
+    .visual-left01,
+    .visual-right01,
+    .visual-left02 {
+        height: 800px;
+    }
+    .visual-left01 img {
+        left: 8%;
+    }
+    .visual-right01 img {
+        right: 8%;
+    }
+    .visual-left02 img {
+        left: 8%;
+    }
+    .WC-page footer,
+    .MC-page footer {
+        margin-top: 200px;
+    }
+    /**
+ * ***************************************
+ * お問い合わせページ メインコンテナ
+ * ***************************************
+ */
+    .contact-main {
+        margin: 0 auto;
+        max-width: 700px;
+    }
+    .contact-heading-container {
+        padding: 4% 4%;
+    }
+    /**
+ * ***************************************
  * フッターコンテナ
  * ***************************************
  */
