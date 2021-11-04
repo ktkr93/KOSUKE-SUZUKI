@@ -1,0 +1,173 @@
+@mixin mb60 {
+    margin-bottom: 60px;
+}
+
+@mixin mb40 {
+    margin-bottom: 40px;
+}
+
+@mixin btn {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: 4% 20%;
+}
+
+@mixin btn-arrow-right {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: 4% 20%;
+    position: relative;
+    margin: 0 auto;
+    transition: 0.3s;
+    &:before {
+        content: '';
+        position: absolute;
+        top: calc(50% - 2px);
+        right: -2em;
+        transform: translateY(calc(-50% - 2px)) rotate(30deg);
+        width: 12px;
+        height: 1px;
+        background-color: #000;
+        transition: 0.3s;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -2em;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 1px;
+        background-color: #000;
+        transition: 0.3s;
+    }
+    &:hover {
+        text-decoration: none;
+        &:before,
+        &:after {
+            right: -2.4rem;
+        }
+    }
+}
+
+@mixin btn-arrow-down {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #000;
+    padding: 4% 20%;
+    position: relative;
+    margin: 0 auto;
+    transition: 0.3s;
+    &:before {
+        content: '';
+        position: absolute;
+        top: calc(50% - 2px);
+        transform: translate(37px, 45px) rotate(120deg);
+        width: 12px;
+        height: 1px;
+        background-color: #000;
+        transition: 0.3s;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translate(-45px, 32px) rotate(90deg);
+        width: 30px;
+        height: 1px;
+        background-color: #000;
+        transition: 0.3s;
+    }
+    &:hover {
+        text-decoration: none;
+        &:before {
+            top: 2rem;
+        }
+        &:after {
+            top: 2.15rem;
+        }
+    }
+}
+
+@mixin txt-vrtcl-rl-h1 {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    display: block;
+    margin: 0 auto 30px auto;
+    font-size: 1.85rem;
+    letter-spacing: 1rem;
+}
+
+@mixin txt-vrtcl-rl-h2 {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    display: block;
+    margin: 0 auto 60px auto;
+    font-size: 1.85rem;
+    letter-spacing: 1rem;
+}
+
+@mixin txt-hrzn-h2 {
+    writing-mode: horizontal-tb;
+    text-align: center;
+    display: block;
+    margin: 0 auto 60px auto;
+    font-size: 1.85rem;
+    letter-spacing: 1rem;
+}
+
+@mixin txt-vrtcl-rl-h3 {
+    position: absolute;
+    top: -50px;
+    left: 4px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 1.85rem;
+    letter-spacing: .6rem;
+}
+
+@mixin txt-vrtcl-rl-p {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: .4rem;
+}
+
+@mixin slider {
+    /*==================================================
+カルーセルのためのcss
+===================================*/
+    position: relative;
+    width: 100%;
+}
+
+@mixin slider-img($slider-img) {
+    /*　背景画像設定　*/
+    background: $slider-img;
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    /*背景画像をリピートしない*/
+    background-position: center;
+    /*背景画像の位置を中央に*/
+    background-size: cover;
+    /*背景画像が.slider-item全体を覆い表示*/
+}
+
+@mixin slider-img_pc($slider-img) {
+    /*　背景画像設定　*/
+    background: $slider-img;
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    /*背景画像をリピートしない*/
+    background-position: center;
+    /*背景画像の位置を中央に*/
+    background-size: cover;
+    /*背景画像が.slider-item全体を覆い表示*/
+}

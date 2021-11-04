@@ -1,0 +1,467 @@
+@charset "UTF-8";
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  /**
+ * ***************************************
+ * メインコンテナ
+ * ***************************************
+ */
+  .rooms header .header-container,
+  .room header .header-container,
+  .senkawa header .header-container,
+  .chamizu header .header-container,
+  .foods header .header-container,
+  .news header .header-container,
+  .access header .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.8% 4%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .rooms header .header-container .header-inner,
+  .room header .header-container .header-inner,
+  .senkawa header .header-container .header-inner,
+  .chamizu header .header-container .header-inner,
+  .foods header .header-container .header-inner,
+  .news header .header-container .header-inner,
+  .access header .header-container .header-inner {
+    height: unset;
+  }
+  .rooms header .header-container .header-inner a,
+  .room header .header-container .header-inner a,
+  .senkawa header .header-container .header-inner a,
+  .chamizu header .header-container .header-inner a,
+  .foods header .header-container .header-inner a,
+  .news header .header-container .header-inner a,
+  .access header .header-container .header-inner a {
+    position: static;
+    display: block;
+    top: unset;
+    left: unset;
+  }
+  .rooms header .header-container .header-inner a h1,
+  .room header .header-container .header-inner a h1,
+  .senkawa header .header-container .header-inner a h1,
+  .chamizu header .header-container .header-inner a h1,
+  .foods header .header-container .header-inner a h1,
+  .news header .header-container .header-inner a h1,
+  .access header .header-container .header-inner a h1 {
+    font-size: 2.28rem;
+  }
+  .rooms header .header-container nav,
+  .room header .header-container nav,
+  .senkawa header .header-container nav,
+  .chamizu header .header-container nav,
+  .foods header .header-container nav,
+  .news header .header-container nav,
+  .access header .header-container nav {
+    position: static;
+    height: unset;
+  }
+  .rooms header .header-container nav ul,
+  .room header .header-container nav ul,
+  .senkawa header .header-container nav ul,
+  .chamizu header .header-container nav ul,
+  .foods header .header-container nav ul,
+  .news header .header-container nav ul,
+  .access header .header-container nav ul {
+    padding: 0;
+  }
+  .page-rooms,
+  .page-senkawa,
+  .page-chamizu,
+  .page-foods,
+  .page-news,
+  .page-access {
+    max-width: 1200px;
+    margin: 100px auto 100px auto;
+  }
+  .top .menu,
+  .top .top-hero,
+  .top .page-main {
+    padding-left: 230px;
+  }
+  header .header-container #openbtn {
+    display: none;
+  }
+  header .header-container .menu {
+    display: block;
+    width: auto;
+    height: 110px;
+    z-index: auto;
+    background-color: transparent;
+  }
+  header .header-container .menu ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px 0;
+  }
+  header .header-container .menu ul li p,
+  header .header-container .menu ul li .none {
+    display: block;
+    font-size: 1.2rem;
+  }
+  header .header-container .menu ul li p {
+    margin-bottom: 8px;
+  }
+  header .header-container .menu ul li a {
+    font-size: 1.2rem;
+  }
+  header .header-container .top-hero .side_pc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 100vh;
+    background: #fdfdfd;
+    padding: 150px 0 0 0;
+    color: #000;
+  }
+  header .header-container .top-hero .side_pc h1 {
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+    text-orientation: upright;
+    display: block;
+    margin: 0 auto 30px auto;
+    font-size: 1.85rem;
+    letter-spacing: 1rem;
+    width: auto;
+    position: static;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  header .header-container .top-hero .side_pc P {
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+    text-orientation: upright;
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: .4rem;
+    margin: 0 auto 30px auto;
+    text-align: left;
+  }
+  header .header-container .top-hero .side_pc .sns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+  }
+  header .header-container .top-hero .side_pc .sns a .size {
+    font-size: 2rem;
+  }
+  .page-main {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .page-main .main-container .top-content .top-content-inner {
+    margin-bottom: 100px;
+  }
+  .page-main .main-container .top-content .top-content-inner .top-content-inner-vrtcl {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    height: 100%;
+    width: 30%;
+    margin: 0 auto;
+  }
+  .page-main .main-container .top-content .top-content-inner h2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    font-size: 2.5rem;
+  }
+  .page-main .main-container .top-content .top-content-inner .vrtcl_p {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+    text-orientation: upright;
+    display: block;
+    font-size: 1rem;
+    text-align: left;
+    letter-spacing: .4rem;
+    line-height: 2.8rem;
+  }
+  .page-main .main-container .top-content .top-content-inner .slider {
+    /*==================================================
+カルーセルのためのcss
+===================================*/
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .page-main .main-container .top-content .top-content-inner .slider li.first {
+    /*　背景画像設定　*/
+    background: url(../images/onsen_tenugui.jpg);
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    /*背景画像をリピートしない*/
+    background-position: center;
+    /*背景画像の位置を中央に*/
+    background-size: cover;
+    /*背景画像が.slider-item全体を覆い表示*/
+  }
+  .page-main .main-container .top-content .top-content-inner .slider li.second {
+    /*　背景画像設定　*/
+    background: url(../images/room01.jpg);
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    /*背景画像をリピートしない*/
+    background-position: center;
+    /*背景画像の位置を中央に*/
+    background-size: cover;
+    /*背景画像が.slider-item全体を覆い表示*/
+  }
+  .page-main .main-container .top-content .top-content-inner .slider li.third {
+    /*　背景画像設定　*/
+    background: url(../images/food01.jpg);
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    /*背景画像をリピートしない*/
+    background-position: center;
+    /*背景画像の位置を中央に*/
+    background-size: cover;
+    /*背景画像が.slider-item全体を覆い表示*/
+  }
+  .page-main .main-container .top-content .top-content-inner .slider li.fourth {
+    /*　背景画像設定　*/
+    background: url(../images/food02.jpg);
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    /*背景画像をリピートしない*/
+    background-position: center;
+    /*背景画像の位置を中央に*/
+    background-size: cover;
+    /*背景画像が.slider-item全体を覆い表示*/
+  }
+  .page-main .main-container .top-content .top-content-inner .slider li.fifth {
+    /*　背景画像設定　*/
+    background: url(../images/room02.jpg);
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    /*背景画像をリピートしない*/
+    background-position: center;
+    /*背景画像の位置を中央に*/
+    background-size: cover;
+    /*背景画像が.slider-item全体を覆い表示*/
+  }
+  .page-main .main-container .top-content .top-content-inner .slider li.sixth {
+    /*　背景画像設定　*/
+    background: url(../images/food01.jpg);
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    /*背景画像をリピートしない*/
+    background-position: center;
+    /*背景画像の位置を中央に*/
+    background-size: cover;
+    /*背景画像が.slider-item全体を覆い表示*/
+  }
+  .page-main .main-container .top-content .top-content-inner .slider li.seventh {
+    /*　背景画像設定　*/
+    background: url(../images/food02.jpg);
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    /*背景画像をリピートしない*/
+    background-position: center;
+    /*背景画像の位置を中央に*/
+    background-size: cover;
+    /*背景画像が.slider-item全体を覆い表示*/
+  }
+  .page-main .main-container .top-content .top-content-inner p {
+    margin-bottom: 60px;
+    letter-spacing: .06rem;
+    line-height: 1.8rem;
+    text-align: left;
+    font-size: 1.125rem;
+  }
+  .page-main .main-container .top-content .top-content-inner .link a {
+    padding: 1.6% 10%;
+  }
+  .page-main .main-container .top-content .top-content-inner .link a:before {
+    right: -1.3rem;
+  }
+  .page-main .main-container .top-content .top-content-inner .link a:hover:before {
+    right: -2rem;
+  }
+  .page-main .main-container .top-content .top-content-inner .link a:after {
+    right: -1.3rem;
+  }
+  .page-main .main-container .top-content .top-content-inner .link a:hover:after {
+    right: -2rem;
+  }
+  .page-main .top-news {
+    padding: 0 4%;
+    max-width: 800px;
+    margin: 0 auto 100px auto;
+  }
+  .page-main .top-news .link a {
+    padding: 1.6% 10%;
+  }
+  .page-main .top-news .link a:before {
+    top: calc(30%);
+    -webkit-transform: translate(40px, 44px) rotate(120deg);
+            transform: translate(40px, 44px) rotate(120deg);
+  }
+  .page-main .top-news .link a:hover:before {
+    top: 2rem;
+    top: 1.16rem;
+  }
+  .page-main .top-news .link a:after {
+    top: 35%;
+    -webkit-transform: translate(-52px, 31px) rotate(90deg);
+            transform: translate(-52px, 31px) rotate(90deg);
+  }
+  .page-main .top-news .link a:hover:after {
+    top: 1.4rem;
+  }
+  .page-main .top-access {
+    padding: 0 4%;
+    width: 100%;
+  }
+  .page-main .top-access .top-access-inner .top-access-map iframe {
+    height: 400px;
+  }
+  .page-main .top-access .top-access-txt a {
+    padding: 1.6% 10%;
+  }
+  .page-main .top-access .top-access-txt a:before {
+    right: -1.3rem;
+  }
+  .page-main .top-access .top-access-txt a:hover:before {
+    right: -2rem;
+  }
+  .page-main .top-access .top-access-txt a:after {
+    right: -1.3rem;
+  }
+  .page-main .top-access .top-access-txt a:hover:after {
+    right: -2rem;
+  }
+  .page-main .top-contact {
+    padding: 0 4%;
+    width: 100%;
+  }
+  .page-main .top-contact .top-contact-inner {
+    height: 200px;
+  }
+}
+
+.page-rooms .main-container .top-content .top-content-inner h3,
+.page-senkawa .main-container .top-content .top-content-inner h3,
+.page-chamizu .main-container .top-content .top-content-inner h3 {
+  font-size: 2.85rem;
+}
+
+.page-rooms .main-container .link a,
+.page-senkawa .main-container .link a,
+.page-chamizu .main-container .link a {
+  padding: 1.6% 10%;
+}
+
+.page-rooms .main-container dl,
+.page-senkawa .main-container dl,
+.page-chamizu .main-container dl {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.page-news .main-container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.page-news .main-container .top-content dl dt span {
+  display: unset;
+}
+
+/**
+ * ***************************************
+ * フッターコンテナ
+ * ***************************************
+ */
+footer {
+  margin-left: 230px;
+  height: 170px;
+}
+
+footer .footer-container {
+  padding: 0 4%;
+}
+
+footer .footer-container .footer-inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5fr 7fr 1fr;
+      grid-template-columns: 5fr 7fr 1fr;
+}
+
+footer .footer-container .footer-inner .footer-left_pc {
+  text-align: left;
+}
+
+footer .footer-container .footer-inner .footer-left_pc a {
+  margin-bottom: 14px;
+  display: block;
+}
+
+footer .footer-container .footer-inner .footer-left_pc p {
+  color: #fff;
+  letter-spacing: .1rem;
+  font-size: .9rem;
+}
+
+footer .footer-container .footer-inner ul {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 18px;
+}
+
+footer .footer-container .footer-inner .sns {
+  gap: 28px;
+}
+
+footer .footer-container .footer-inner .sns a .size {
+  font-size: 2rem;
+}
+
+.rooms footer,
+.room footer,
+.senkawa footer,
+.chamizu footer,
+.foods footer,
+.news footer,
+.access footer {
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,372 @@
+@import "variables";
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    /**
+ * ***************************************
+ * メインコンテナ
+ * ***************************************
+ */
+    .rooms,
+    .room,
+    .senkawa,
+    .chamizu,
+    .foods,
+    .news,
+    .access {
+        header {
+            .header-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 1.8% 4%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .header-inner {
+                    height: unset;
+                    a {
+                        position: static;
+                        display: block;
+                        top: unset;
+                        left: unset;
+                        h1 {
+                            font-size: 2.28rem
+                        }
+                    }
+                }
+                nav {
+                    position: static;
+                    height: unset;
+                    ul {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+    .page-rooms,
+    .page-senkawa,
+    .page-chamizu,
+    .page-foods,
+    .page-news,
+    .page-access {
+        max-width: 1200px;
+        margin: 100px auto 100px auto;
+    }
+    .top {
+        .menu,
+        .top-hero,
+        .page-main {
+            padding-left: 230px;
+        }
+    }
+    header {
+        .header-container {
+            #openbtn {
+                display: none;
+            }
+            .menu {
+                display: block;
+                width: auto;
+                height: 110px;
+                z-index: auto;
+                background-color: transparent;
+                ul {
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 30px 0;
+                    li {
+                        p,
+                        .none {
+                            display: block;
+                            font-size: 1.2rem;
+                        }
+                        p {
+                            margin-bottom: 8px;
+                        }
+                        a {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            .top-hero {
+                .side_pc {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 230px;
+                    height: 100vh;
+                    background: #fdfdfd;
+                    padding: 150px 0 0 0;
+                    color: #000;
+                    h1 {
+                        @include txt-vrtcl-rl-h1;
+                        width: auto;
+                        position: static;
+                        transform: unset;
+                    }
+                    P {
+                        @include txt-vrtcl-rl-p;
+                        margin: 0 auto 30px auto;
+                        text-align: left;
+                    }
+                    .sns {
+                        display: flex;
+                        justify-content: center;
+                        gap: 30px;
+                        a {
+                            .size {
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .page-main {
+        max-width: 1240px;
+        margin: 0 auto;
+    }
+    .page-main {
+        .main-container {
+            .top-content {
+                .top-content-inner {
+                    margin-bottom: 100px;
+                    .top-content-inner-vrtcl {
+                        display: -ms-grid;
+                        display: grid;
+                        -ms-grid-columns: 1fr 1fr;
+                        grid-template-columns: 2fr 1fr;
+                        height: 100%;
+                        width: 30%;
+                        margin: 0 auto;
+                    }
+                    h2 {
+                        order: 2;
+                        font-size: 2.5rem;
+                    }
+                    .vrtcl_p {
+                        order: 1;
+                        -ms-writing-mode: tb-rl;
+                        writing-mode: vertical-rl;
+                        text-orientation: upright;
+                        display: block;
+                        font-size: 1rem;
+                        text-align: left;
+                        letter-spacing: .4rem;
+                        line-height: 2.8rem;
+                    }
+                    .slider {
+                        @include slider;
+                        margin-bottom: 20px;
+                        li {
+                            &.first {
+                                @include slider-img_pc(url(../images/onsen_tenugui.jpg))
+                            }
+                            &.second {
+                                @include slider-img_pc(url(../images/room01.jpg))
+                            }
+                            &.third {
+                                @include slider-img_pc(url(../images/food01.jpg))
+                            }
+                            &.fourth {
+                                @include slider-img_pc(url(../images/food02.jpg))
+                            }
+                            &.fifth {
+                                @include slider-img_pc(url(../images/room02.jpg))
+                            }
+                            &.sixth {
+                                @include slider-img_pc(url(../images/food01.jpg))
+                            }
+                            &.seventh {
+                                @include slider-img_pc(url(../images/food02.jpg))
+                            }
+                        }
+                    }
+                    p {
+                        @include mb60;
+                        letter-spacing: .06rem;
+                        line-height: 1.8rem;
+                        text-align: left;
+                        font-size: 1.125rem;
+                    }
+                    .link {
+                        a {
+                            padding: 1.6% 10%;
+                            &:before {
+                                right: -1.3rem;
+                            }
+                            &:hover:before {
+                                right: -2rem;
+                            }
+                            &:after {
+                                right: -1.3rem;
+                            }
+                            &:hover:after {
+                                right: -2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .top-news {
+            padding: 0 4%;
+            max-width: 800px;
+            margin: 0 auto 100px auto;
+            .link {
+                a {
+                    padding: 1.6% 10%;
+                    &:before {
+                        top: calc(30%);
+                        transform: translate(40px, 44px) rotate(120deg);
+                    }
+                    &:hover:before {
+                        top: 2rem;
+                        top: 1.16rem;
+                    }
+                    &:after {
+                        top: 35%;
+                        transform: translate(-52px, 31px) rotate(90deg);
+                    }
+                    &:hover:after {
+                        top: 1.4rem;
+                    }
+                }
+            }
+        }
+        .top-access {
+            padding: 0 4%;
+            width: 100%;
+            .top-access-inner {
+                .top-access-map {
+                    iframe {
+                        height: 400px;
+                    }
+                }
+            }
+            .top-access-txt {
+                a {
+                    padding: 1.6% 10%;
+                    &:before {
+                        right: -1.3rem;
+                    }
+                    &:hover:before {
+                        right: -2rem;
+                    }
+                    &:after {
+                        right: -1.3rem;
+                    }
+                    &:hover:after {
+                        right: -2rem;
+                    }
+                }
+            }
+        }
+        .top-contact {
+            padding: 0 4%;
+            width: 100%;
+            .top-contact-inner {
+                height: 200px;
+            }
+        }
+    }
+}
+
+.page-rooms,
+.page-senkawa,
+.page-chamizu {
+    .main-container {
+        .top-content {
+            .top-content-inner {
+                h3 {
+                    font-size: 2.85rem;
+                }
+            }
+        }
+        .link {
+            a {
+                padding: 1.6% 10%;
+            }
+        }
+        dl {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+    }
+}
+
+.page-news {
+    .main-container {
+        margin: 0 auto;
+        max-width: 800px;
+        .top-content {
+            dl {
+                dt {
+                    span {
+                        display: unset;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/**
+ * ***************************************
+ * フッターコンテナ
+ * ***************************************
+ */
+
+footer {
+    margin-left: 230px;
+    height: 170px;
+    .footer-container {
+        padding: 0 4%;
+        .footer-inner {
+            display: grid;
+            grid-template-columns: 5fr 7fr 1fr;
+            .footer-left_pc {
+                text-align: left;
+                a {
+                    margin-bottom: 14px;
+                    display: block;
+                    h2 {}
+                }
+                p {
+                    color: #fff;
+                    letter-spacing: .1rem;
+                    font-size: .9rem;
+                }
+            }
+            ul {
+                flex-direction: row;
+                gap: 18px;
+            }
+            .sns {
+                gap: 28px;
+                a {
+                    .size {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.rooms,
+.room,
+.senkawa,
+.chamizu,
+.foods,
+.news,
+.access {
+    footer {
+        margin: 0;
+    }
+}

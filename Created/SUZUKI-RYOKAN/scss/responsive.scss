@@ -1,0 +1,709 @@
+@import "variables";
+
+/**
+ * ***************************************
+ * ページ全体に関わるCSSの設定
+ * ***************************************
+ */
+
+
+/* フォント */
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 400;
+}
+
+
+/* ベースのリンクカラー */
+
+
+/* レスポンシブイメージと画像下スペース防止 */
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    /* 画像下のスペースを消す */
+}
+
+body {
+    display: none;
+}
+
+
+/*========= end 背景動画設定のCSS ===============*/
+
+header {
+    .header-container {
+        position: relative;
+        /*==================================================
+　5-2-3 3本線が1本線に
+===================================*/
+        #openbtn {
+            position: absolute;
+            /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+            width: 46px;
+            height: 36px;
+            top: 21px;
+            right: 20px;
+            z-index: 100;
+            /*ボタン内側の基点となるためrelativeを指定。追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        /*ボタン内側*/
+        span {
+            display: inline-block;
+            transition: all .4s;
+            position: absolute;
+            /*アニメーションの設定*/
+            height: 2px;
+            border-radius: 2px;
+            background: #fff;
+            width: 100%;
+        }
+        span:nth-of-type(1) {
+            top: 0px;
+        }
+        span:nth-of-type(2) {
+            top: 17px;
+        }
+        span:nth-of-type(3) {
+            top: 34px;
+        }
+        .menu {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            z-index: 10;
+            background-color: #fff;
+            ul {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                gap: 64px;
+                padding: 26% 0;
+                li {
+                    a {
+                        font-size: 1.6rem;
+                    }
+                    p,
+                    .none {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .top-hero {
+            @include mb60;
+            /*========= 背景動画設定のCSS ===============*/
+            /*header設定*/
+            position: relative;
+            /*ローディング画像などを表示す際の基点とするため指定*/
+            height: 70vh;
+            /*高さを全画面にあわせる*/
+            text-align: center;
+            color: #fff;
+            /*ローディング画面時＆動画が表示されないときに表示する背景画像のレスポンシブ化*/
+            background: url("../img/movie.jpg") no-repeat;
+            background-size: cover;
+            /* youtube設定 */
+            z-index: 1;
+            /*最背面に設定*/
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            opacity: 0;
+            /* ローディングアイコン設定 */
+            .loading {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: bold;
+            }
+            /*jQueryで付与されたdisappearクラスがついたらロゴエリアを非表示*/
+            .loading.disappear {
+                display: none;
+            }
+            #youtube {
+                /*天地中央配置*/
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                /*縦横幅指定*/
+                width: 177.77777778vh;
+                /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+                height: 56.25vw;
+                /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+                min-height: 100%;
+                min-width: 100%;
+            }
+            /*youtubeがクリックされないためのマスク*/
+            #youtube-mask {
+                position: absolute;
+                z-index: 2;
+                /*下から2番目に表示*/
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+            h1 {
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                font-size: 2.28rem;
+                letter-spacing: 1.2rem;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
+
+/*activeクラスが付与されると1・3番目の要素が2番目の要素と同じ位置になり一本線に*/
+
+#openbtn.active span:nth-of-type(1),
+#openbtn.active span:nth-of-type(3) {
+    position: absolute;
+    top: 17px;
+    background-color: #000;
+}
+
+#openbtn.active span:nth-of-type(2) {
+    position: absolute;
+    top: 17px;
+    background-color: #000;
+}
+
+
+/*jQueryで付与されたappearクラスがついたらYoutubeエリアをふわっと表示*/
+
+.top-hero.appear {
+    animation-name: PageAnimeAppear;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes PageAnimeAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*矢印の設定*/
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    z-index: 3;
+    top: 47%;
+    cursor: pointer;
+    /*マウスカーソルを指マークに*/
+    outline: none;
+    /*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #fff;
+    /*矢印の色*/
+    border-right: 2px solid #fff;
+    /*矢印の色*/
+    height: 20px;
+    width: 20px;
+}
+
+.slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: 5.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {
+    /*次へ矢印の位置と形状*/
+    right: 5.5%;
+    transform: rotate(45deg);
+}
+
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    bottom: 20px;
+    /*ドットの位置*/
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 8px;
+    /*ドットボタンのサイズ*/
+    height: 8px;
+    /*ドットボタンのサイズ*/
+    display: block;
+    border-radius: 50%;
+    background: #fff;
+    /*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button {
+    background: #333;
+    /*ドットボタンの現在地表示の色*/
+}
+
+.top-content {
+    @include mb60;
+    .top-content-inner {
+        padding: 0 4%;
+        @include mb60;
+        h2 {
+            @include txt-vrtcl-rl-h2;
+        }
+        .slider {
+            @include slider;
+            li {
+                &.first {
+                    @include slider-img(url(../images/onsen_tenugui.jpg))
+                }
+                &.second {
+                    @include slider-img(url(../images/room01.jpg))
+                }
+                &.third {
+                    @include slider-img(url(../images/food01.jpg))
+                }
+                &.fourth {
+                    @include slider-img(url(../images/food02.jpg))
+                }
+                &.fifth {
+                    @include slider-img(url(../images/room02.jpg))
+                }
+                &.sixth {
+                    @include slider-img(url(../images/food01.jpg))
+                }
+                &.seventh {
+                    @include slider-img(url(../images/food02.jpg))
+                }
+            }
+        }
+        p {
+            @include mb60;
+            letter-spacing: .06rem;
+            line-height: 1.8rem;
+            text-align: center;
+        }
+        .link {
+            text-align: center;
+            a {
+                @include btn-arrow-right;
+            }
+        }
+    }
+}
+
+.top-news {
+    padding: 0 4%;
+    @include mb60;
+    h2 {
+        @include mb60;
+        text-align: center;
+        font-size: 1.85rem;
+        letter-spacing: .6rem;
+    }
+    dl {
+        letter-spacing: .06rem;
+        line-height: 1.8rem;
+        dt {
+            margin-bottom: 10px;
+            span {
+                margin-left: 10px;
+                padding: 5px 18px;
+                background: #666666;
+                color: #fff;
+                font-size: .8rem;
+            }
+        }
+        dd {
+            margin-bottom: 30px;
+        }
+        .top-news-acrdn {
+            display: none;
+        }
+    }
+    .link {
+        text-align: center;
+        a {
+            @include btn-arrow-down;
+        }
+    }
+}
+
+.top-access {
+    width: 90%;
+    margin: 0 auto;
+    @include mb60;
+    .top-access-inner {
+        -webkit-box-shadow: 0 4px 4px #ccc;
+        box-shadow: 0 4px 4px #ccc;
+    }
+    h2 {
+        @include mb60;
+        text-align: center;
+        font-size: 1.85rem;
+        letter-spacing: .6rem;
+    }
+    .top-access-txt {
+        padding: 40px 20px;
+        text-align: center;
+        h3 {
+            font-size: 1.857rem;
+            margin-bottom: 30px;
+        }
+        P {
+            letter-spacing: .06rem;
+            line-height: 1.8rem;
+            margin-bottom: 30px
+        }
+        a {
+            @include btn-arrow-right;
+        }
+    }
+}
+
+.top-contact {
+    width: 90%;
+    margin: 0 auto;
+    @include mb60;
+    .top-contact-inner {
+        padding: 40px 20px;
+        padding: 40px 20px;
+        border: 1px solid #C4C4C4;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    h3,
+    a,
+    p {
+        letter-spacing: .06rem;
+    }
+    h3,
+    a {
+        margin-bottom: 10px;
+    }
+    a {
+        display: inline-block;
+    }
+}
+
+
+/* お部屋ページ */
+
+.rooms,
+.room,
+.senkawa,
+.chamizu,
+.foods,
+.news,
+.access {
+    header {
+        .header-container {
+            @include mb60;
+            .header-inner {
+                height: 80px;
+                #openbtn {
+                    span {
+                        background-color: #000;
+                    }
+                }
+                a {
+                    display: block;
+                    position: absolute;
+                    top: 20px;
+                    left: calc(50% - 68px);
+                    h1 {
+                        font-size: 2.28rem
+                    }
+                }
+            }
+            nav {
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+}
+
+.page-rooms,
+.page-senkawa,
+.page-chamizu,
+.page-foods,
+.page-access {
+    .main-container {
+        .top-content {
+            h2 {
+                @include txt-hrzn-h2;
+                position: relative;
+                &:after {
+                    content: '';
+                    background: #000;
+                    width: 30px;
+                    height: 1px;
+                    position: absolute;
+                    top: 42px;
+                    left: 46%;
+                }
+            }
+            .top-content-inner {
+                position: relative;
+                img {
+                    padding-bottom: 20px;
+                }
+                h3 {
+                    span {
+                        padding-top: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-senkawa,
+.page-chamizu,
+.page-foods {
+    .main-container {
+        .top-content {
+            .top-content-inner {
+                h3 {
+                    margin-bottom: 30px;
+                }
+                P {
+                    margin-bottom: 30px;
+                    font-size: 1.14rem;
+                }
+                .second {
+                    @include mb60;
+                    font-size: 1rem;
+                }
+                dl {
+                    .row {
+                        display: grid;
+                        grid-template-columns: 1fr 2fr;
+                        padding-bottom: 15px;
+                        margin-bottom: 15px;
+                        border-bottom: 1px solid #000;
+                        dt,
+                        dd {
+                            letter-spacing: .06rem;
+                            line-height: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-senkawa,
+.page-chamizu {
+    .main-container {
+        .top-content {
+            .top-content-inner {
+                h3 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.page-rooms {
+    .main-container {
+        .top-content {
+            .top-content-inner {
+                h3 {
+                    @include txt-vrtcl-rl-h3;
+                }
+                p {
+                    @include mb40;
+                    letter-spacing: .06rem;
+                    line-height: 1.8rem;
+                    text-align: center;
+                    font-size: 1.14rem;
+                }
+            }
+        }
+    }
+}
+
+.page-foods {
+    .main-container {
+        .top-content {
+            .top-content-inner {
+                h3 {
+                    text-align: left;
+                    letter-spacing: .06rem;
+                    line-height: 1.8rem;
+                    font-size: 1.42rem;
+                    color: #4E4E4E;
+                }
+                P {
+                    margin-bottom: 30px;
+                    font-size: 1.14rem;
+                }
+                .morning {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.page-news {
+    .main-container {
+        .top-content {
+            padding: 0 4%;
+            @include mb60;
+            h2 {
+                @include mb60;
+                text-align: center;
+                font-size: 1.85rem;
+                letter-spacing: .6rem;
+            }
+            dl {
+                letter-spacing: .06rem;
+                line-height: 1.8rem;
+                dt {
+                    margin-bottom: 10px;
+                    span {
+                        display: inline-block;
+                        margin-left: 10px;
+                        padding: 5px 18px;
+                        background: #666666;
+                        color: #fff;
+                        font-size: .8rem;
+                    }
+                }
+                dd {
+                    margin-bottom: 30px;
+                }
+                .top-news-acrdn {
+                    display: none;
+                }
+            }
+            .link {
+                text-align: center;
+                a {
+                    @include btn-arrow-down;
+                }
+            }
+        }
+    }
+}
+
+.page-access {
+    .main-container {
+        .top-content {
+            .top-content-inner {
+                h3 {
+                    margin-bottom: 14px;
+                    text-align: center;
+                    font-size: 1.42rem;
+                }
+                .top-access-map {
+                    margin-bottom: 30px;
+                }
+                .top-access-txt {
+                    h4 {
+                        font-size: 1.42rem;
+                        margin-bottom: 20px;
+                    }
+                    ul {
+                        list-style: square;
+                        margin-left: 6%;
+                        li {
+                            letter-spacing: .06rem;
+                            line-height: 1.8rem;
+                        }
+                    }
+                    P {
+                        margin-bottom: 30px;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    height: 470px;
+    background: url(../images/onsen_tenugui.jpg) no-repeat center/cover;
+    .footer-container {
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        .footer-inner {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 40px;
+            align-items: center;
+            h2 {
+                letter-spacing: .6rem;
+            }
+            h2 {
+                font-size: 1.857rem;
+                color: #fff;
+            }
+            ul {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 26px;
+                li {
+                    color: #fff;
+                    letter-spacing: .3rem
+                }
+            }
+            .sns {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                gap: 50px;
+                a {
+                    .size {
+                        color: #fff;
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
