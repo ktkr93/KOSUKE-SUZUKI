@@ -274,99 +274,93 @@
             }
         }
     }
-}
-
-.page-rooms,
-.page-senkawa,
-.page-chamizu {
-    .main-container {
-        .top-content {
-            .top-content-inner {
-                h3 {
-                    font-size: 2.85rem;
+    .page-rooms,
+    .page-senkawa,
+    .page-chamizu {
+        .main-container {
+            .top-content {
+                .top-content-inner {
+                    h3 {
+                        font-size: 2.85rem;
+                    }
                 }
             }
-        }
-        .link {
-            a {
-                padding: 1.6% 10%;
+            .link {
+                a {
+                    padding: 1.6% 10%;
+                }
+            }
+            dl {
+                margin: 0 auto;
+                max-width: 800px;
             }
         }
-        dl {
+    }
+    .page-news {
+        .main-container {
             margin: 0 auto;
             max-width: 800px;
-        }
-    }
-}
-
-.page-news {
-    .main-container {
-        margin: 0 auto;
-        max-width: 800px;
-        .top-content {
-            dl {
-                dt {
-                    span {
-                        display: unset;
+            .top-content {
+                dl {
+                    dt {
+                        span {
+                            display: unset;
+                        }
                     }
                 }
             }
         }
     }
-}
-
-
-/**
+    /**
  * ***************************************
  * フッターコンテナ
  * ***************************************
  */
-
-footer {
-    margin-left: 230px;
-    height: 170px;
-    .footer-container {
-        padding: 0 4%;
-        .footer-inner {
-            display: grid;
-            grid-template-columns: 5fr 7fr 1fr;
-            .footer-left_pc {
-                text-align: left;
-                a {
-                    margin-bottom: 14px;
-                    display: block;
-                    h2 {}
+    footer {
+        margin-left: 230px;
+        height: 170px;
+        .footer-container {
+            padding: 0 4%;
+            .footer-inner {
+                display: grid;
+                grid-template-columns: 5fr 7fr 1fr;
+                .footer-left_pc {
+                    text-align: left;
+                    a {
+                        margin-bottom: 14px;
+                        display: block;
+                        h2 {}
+                    }
+                    p {
+                        color: #fff;
+                        letter-spacing: .1rem;
+                        font-size: .9rem;
+                    }
                 }
-                p {
-                    color: #fff;
-                    letter-spacing: .1rem;
-                    font-size: .9rem;
+                ul {
+                    flex-direction: row;
+                    gap: 18px;
                 }
-            }
-            ul {
-                flex-direction: row;
-                gap: 18px;
-            }
-            .sns {
-                gap: 28px;
-                a {
-                    .size {
-                        font-size: 2rem;
+                .sns {
+                    gap: 28px;
+                    a {
+                        .size {
+                            font-size: 2rem;
+                        }
                     }
                 }
             }
         }
     }
-}
-
-.rooms,
-.room,
-.senkawa,
-.chamizu,
-.foods,
-.news,
-.access {
-    footer {
-        margin: 0;
+    .rooms,
+    .room,
+    .senkawa,
+    .chamizu,
+    .foods,
+    .news,
+    .access {
+        footer {
+            margin: 0;
+        }
     }
 }

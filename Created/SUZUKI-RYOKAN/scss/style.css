@@ -373,95 +373,80 @@
   .page-main .top-contact .top-contact-inner {
     height: 200px;
   }
-}
-
-.page-rooms .main-container .top-content .top-content-inner h3,
-.page-senkawa .main-container .top-content .top-content-inner h3,
-.page-chamizu .main-container .top-content .top-content-inner h3 {
-  font-size: 2.85rem;
-}
-
-.page-rooms .main-container .link a,
-.page-senkawa .main-container .link a,
-.page-chamizu .main-container .link a {
-  padding: 1.6% 10%;
-}
-
-.page-rooms .main-container dl,
-.page-senkawa .main-container dl,
-.page-chamizu .main-container dl {
-  margin: 0 auto;
-  max-width: 800px;
-}
-
-.page-news .main-container {
-  margin: 0 auto;
-  max-width: 800px;
-}
-
-.page-news .main-container .top-content dl dt span {
-  display: unset;
-}
-
-/**
+  .page-rooms .main-container .top-content .top-content-inner h3,
+  .page-senkawa .main-container .top-content .top-content-inner h3,
+  .page-chamizu .main-container .top-content .top-content-inner h3 {
+    font-size: 2.85rem;
+  }
+  .page-rooms .main-container .link a,
+  .page-senkawa .main-container .link a,
+  .page-chamizu .main-container .link a {
+    padding: 1.6% 10%;
+  }
+  .page-rooms .main-container dl,
+  .page-senkawa .main-container dl,
+  .page-chamizu .main-container dl {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  .page-news .main-container {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  .page-news .main-container .top-content dl dt span {
+    display: unset;
+  }
+  /**
  * ***************************************
  * フッターコンテナ
  * ***************************************
  */
-footer {
-  margin-left: 230px;
-  height: 170px;
-}
-
-footer .footer-container {
-  padding: 0 4%;
-}
-
-footer .footer-container .footer-inner {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 5fr 7fr 1fr;
-      grid-template-columns: 5fr 7fr 1fr;
-}
-
-footer .footer-container .footer-inner .footer-left_pc {
-  text-align: left;
-}
-
-footer .footer-container .footer-inner .footer-left_pc a {
-  margin-bottom: 14px;
-  display: block;
-}
-
-footer .footer-container .footer-inner .footer-left_pc p {
-  color: #fff;
-  letter-spacing: .1rem;
-  font-size: .9rem;
-}
-
-footer .footer-container .footer-inner ul {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 18px;
-}
-
-footer .footer-container .footer-inner .sns {
-  gap: 28px;
-}
-
-footer .footer-container .footer-inner .sns a .size {
-  font-size: 2rem;
-}
-
-.rooms footer,
-.room footer,
-.senkawa footer,
-.chamizu footer,
-.foods footer,
-.news footer,
-.access footer {
-  margin: 0;
+  footer {
+    margin-left: 230px;
+    height: 170px;
+  }
+  footer .footer-container {
+    padding: 0 4%;
+  }
+  footer .footer-container .footer-inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 5fr 7fr 1fr;
+        grid-template-columns: 5fr 7fr 1fr;
+  }
+  footer .footer-container .footer-inner .footer-left_pc {
+    text-align: left;
+  }
+  footer .footer-container .footer-inner .footer-left_pc a {
+    margin-bottom: 14px;
+    display: block;
+  }
+  footer .footer-container .footer-inner .footer-left_pc p {
+    color: #fff;
+    letter-spacing: .1rem;
+    font-size: .9rem;
+  }
+  footer .footer-container .footer-inner ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 18px;
+  }
+  footer .footer-container .footer-inner .sns {
+    gap: 28px;
+  }
+  footer .footer-container .footer-inner .sns a .size {
+    font-size: 2rem;
+  }
+  .rooms footer,
+  .room footer,
+  .senkawa footer,
+  .chamizu footer,
+  .foods footer,
+  .news footer,
+  .access footer {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
