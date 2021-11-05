@@ -1030,6 +1030,10 @@ footer .footer-container .footer-inner {
           align-items: center;
 }
 
+footer .footer-container .footer-inner .footer-left_pc p {
+  display: none;
+}
+
 footer .footer-container .footer-inner h2 {
   letter-spacing: .6rem;
 }
@@ -1075,5 +1079,11 @@ footer .footer-container .footer-inner .sns {
 footer .footer-container .footer-inner .sns a .size {
   color: #fff;
   font-size: 3rem;
+}
+
+footer .footer-container .footer-inner .footer-bottom_sp {
+  color: #fff;
+  letter-spacing: .1rem;
+  font-size: .9rem;
 }
 /*# sourceMappingURL=responsive.css.map */

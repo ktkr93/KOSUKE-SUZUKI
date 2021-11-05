@@ -332,6 +332,7 @@
                         h2 {}
                     }
                     p {
+                        display: block;
                         color: #fff;
                         letter-spacing: .1rem;
                         font-size: .9rem;
@@ -348,6 +349,9 @@
                             font-size: 2rem;
                         }
                     }
+                }
+                .footer-bottom_sp {
+                    display: none;
                 }
             }
         }

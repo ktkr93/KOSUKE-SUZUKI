@@ -422,6 +422,7 @@
     display: block;
   }
   footer .footer-container .footer-inner .footer-left_pc p {
+    display: block;
     color: #fff;
     letter-spacing: .1rem;
     font-size: .9rem;
@@ -438,6 +439,9 @@
   }
   footer .footer-container .footer-inner .sns a .size {
     font-size: 2rem;
+  }
+  footer .footer-container .footer-inner .footer-bottom_sp {
+    display: none;
   }
   .rooms footer,
   .room footer,
