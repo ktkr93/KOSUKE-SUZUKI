@@ -172,16 +172,16 @@
                             &.third {
                                 @include slider-img_pc(url(../images/food01.jpg))
                             }
-                            &.fourth {
-                                @include slider-img_pc(url(../images/food02.jpg))
+                            &.room01 {
+                                @include slider-img_pc(url(../images/room01.jpg))
                             }
-                            &.fifth {
+                            &.room02 {
                                 @include slider-img_pc(url(../images/room02.jpg))
                             }
-                            &.sixth {
+                            &.food01 {
                                 @include slider-img_pc(url(../images/food01.jpg))
                             }
-                            &.seventh {
+                            &.food02 {
                                 @include slider-img_pc(url(../images/food02.jpg))
                             }
                         }

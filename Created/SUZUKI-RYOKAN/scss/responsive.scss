@@ -295,16 +295,16 @@ header {
                 &.third {
                     @include slider-img(url(../images/food01.jpg))
                 }
-                &.fourth {
-                    @include slider-img(url(../images/food02.jpg))
-                }
-                &.fifth {
+                &.room01 {
                     @include slider-img(url(../images/room02.jpg))
                 }
-                &.sixth {
+                &.room02 {
+                    @include slider-img(url(../images/room01.jpg))
+                }
+                &.food01 {
                     @include slider-img(url(../images/food01.jpg))
                 }
-                &.seventh {
+                &.food02 {
                     @include slider-img(url(../images/food02.jpg))
                 }
             }

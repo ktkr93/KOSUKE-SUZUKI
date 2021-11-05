@@ -249,9 +249,9 @@
     background-size: cover;
     /*背景画像が.slider-item全体を覆い表示*/
   }
-  .page-main .main-container .top-content .top-content-inner .slider li.fourth {
+  .page-main .main-container .top-content .top-content-inner .slider li.room01 {
     /*　背景画像設定　*/
-    background: url(../images/food02.jpg);
+    background: url(../images/room01.jpg);
     width: 100%;
     height: 60vh;
     background-repeat: no-repeat;
@@ -261,7 +261,7 @@
     background-size: cover;
     /*背景画像が.slider-item全体を覆い表示*/
   }
-  .page-main .main-container .top-content .top-content-inner .slider li.fifth {
+  .page-main .main-container .top-content .top-content-inner .slider li.room02 {
     /*　背景画像設定　*/
     background: url(../images/room02.jpg);
     width: 100%;
@@ -273,7 +273,7 @@
     background-size: cover;
     /*背景画像が.slider-item全体を覆い表示*/
   }
-  .page-main .main-container .top-content .top-content-inner .slider li.sixth {
+  .page-main .main-container .top-content .top-content-inner .slider li.food01 {
     /*　背景画像設定　*/
     background: url(../images/food01.jpg);
     width: 100%;
@@ -285,7 +285,7 @@
     background-size: cover;
     /*背景画像が.slider-item全体を覆い表示*/
   }
-  .page-main .main-container .top-content .top-content-inner .slider li.seventh {
+  .page-main .main-container .top-content .top-content-inner .slider li.food02 {
     /*　背景画像設定　*/
     background: url(../images/food02.jpg);
     width: 100%;
