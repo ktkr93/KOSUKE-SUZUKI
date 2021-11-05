@@ -196,7 +196,7 @@ header {
 
 .top-hero.appear {
     animation-name: PageAnimeAppear;
-    animation-duration: .5s;
+    animation-duration: .3s;
     animation-fill-mode: forwards;
 }
 
@@ -250,24 +250,22 @@ header {
     text-align: center;
     bottom: 20px;
     /*ドットの位置*/
-}
-
-.slick-dots li {
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.slick-dots button {
-    color: transparent;
-    outline: none;
-    width: 8px;
-    /*ドットボタンのサイズ*/
-    height: 8px;
-    /*ドットボタンのサイズ*/
-    display: block;
-    border-radius: 50%;
-    background: #fff;
-    /*ドットボタンの色*/
+    li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    button {
+        color: transparent;
+        outline: none;
+        width: 8px;
+        /*ドットボタンのサイズ*/
+        height: 8px;
+        /*ドットボタンのサイズ*/
+        display: block;
+        border-radius: 50%;
+        background: #fff;
+        /*ドットボタンの色*/
+    }
 }
 
 .slick-dots .slick-active button {

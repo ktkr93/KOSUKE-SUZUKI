@@ -205,8 +205,8 @@ header .header-container .top-hero h1 {
 .top-hero.appear {
   -webkit-animation-name: PageAnimeAppear;
           animation-name: PageAnimeAppear;
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
