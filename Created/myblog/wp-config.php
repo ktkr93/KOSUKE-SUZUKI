@@ -13,7 +13,7 @@
  * * データベーステーブル接頭辞
  * * ABSPATH
  *
- * @link https://ja.wordpress.org/support/article/editing-wp-config-php/
+ * @link http://wpdocs.osdn.jp/wp-config.php_%E3%81%AE%E7%B7%A8%E9%9B%86
  *
  * @package WordPress
  */
@@ -26,22 +26,22 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define( 'DB_NAME', 'wp-01' );
+define('DB_NAME', 'LAA1354191-79ihj5');
 
 /** MySQL データベースのユーザー名 */
-define( 'DB_USER', 'root' );
+define('DB_USER', 'LAA1354191');
 
 /** MySQL データベースのパスワード */
-define( 'DB_PASSWORD', 'ktkr93' );
+define('DB_PASSWORD', 'fQnhE0uO');
 
 /** MySQL のホスト名 */
-define( 'DB_HOST', 'localhost' );
+define('DB_HOST', 'mysql146.phy.lolipop.lan');
 
 /** データベースのテーブルを作成する際のデータベースの文字セット */
-define( 'DB_CHARSET', 'utf8mb4' );
+define('DB_CHARSET', 'utf8');
 
 /** データベースの照合順序 (ほとんどの場合変更する必要はありません) */
-define( 'DB_COLLATE', '' );
+define('DB_COLLATE', '');
 
 /**#@+
  * 認証用ユニークキー
@@ -52,14 +52,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'q<gynER`y~)lgtX,ey|?ePHAa~!a|JEn`iBHwkilev(!yAYK|F/0KM)gWgg|S8U7' );
-define( 'SECURE_AUTH_KEY',  '^J,vt2>QJyA=%/qhZw,ESPP6VZ6251Sn^MttV]-T6oZwd;p!0Vk5f-aEv-8e?+~N' );
-define( 'LOGGED_IN_KEY',    'm3B(,w?y#J$S$Z&14#nm,bvdqURG!9]Ez)Uod`nv#N69EF0}d0@g$ eTe6N{lnlx' );
-define( 'NONCE_KEY',        'ke53(7x-,>]h6yY)hu^.`,ovx=gt5 9w1%?sDgm5IoY4@8^io[q<?q`I;_6$sz_f' );
-define( 'AUTH_SALT',        '.>i!EH|tPpa^H/-GxrLJg*>Z:RV?TVvu3$[z1yY3&;Pw,`V|SDlpBM/+7B+r3UW:' );
-define( 'SECURE_AUTH_SALT', '${RRpYc[v<~eqG^R9ysISe9Pa=US9KHM^<edqzT<0q~w5:AL]z8V*6T?3Lw^rtj>' );
-define( 'LOGGED_IN_SALT',   'z>wTh/qYRXKdSkqd,U2f:~DiNoNc[u os-FJO&)s&1r; s*?wM{#gg]aw,tWEcIH' );
-define( 'NONCE_SALT',       '68i_Y|D}EmK3UA.l1-${HX^DEMGc@2y5;5z):Q:58_uC3Eaq7NNgrWWeG:<&{yjx' );
+define('AUTH_KEY', 'iC|:"6IIGkcapjbxAcls*aHwPOTC:j~72NrO_*!UpbQWFx:.,YSa9A[WXB@7F`(N');
+define('SECURE_AUTH_KEY', 'qU$9i.Q|vie"fuH_RJOCQ"MSon2E`).~#9v#mqUNsD1;@Y8zN&}^iK-c5@<J44DX');
+define('LOGGED_IN_KEY', '1?C/$K-BZn7PT,3kK>Nrn%OGrNN1uCd*FXEDG_#E7LP2Q%bsEQVUDBi9S6UBaUiM');
+define('NONCE_KEY', '<o_ckbeX}`((@@<}%QC0:DM&PB*F4fVohx!`[B:jg&K$Q"0vwi^=xK8(PWu[qC+3');
+define('AUTH_SALT', '>Kc^:?"^X4Y;wxRB_p1ean"$I^6&l1y&@s$V!wa)x~@7iE2+~%ElwszGPEZGL(<L');
+define('SECURE_AUTH_SALT', 'o-mO^{m0Xgp]6x-n~>2Hn0:TgpC4$AZ-TEq}K(x]Hr<1<^l)hco6@^y/M_;&93s-');
+define('LOGGED_IN_SALT', 'dpD]#7xhV3xKGNz[Neh|,hpJ(o9zh^qvC|NS7uLs`/Unb)8FdS+7-UjEVG|%JBp[');
+define('NONCE_SALT', 'bj"3YnstAQ8Up]sHnG$*L^7#!BDZ=XB%wokS`53wSm?xDvXQ^wmv"]q0d%}FnL0M');
 
 /**#@-*/
 
@@ -69,7 +69,7 @@ define( 'NONCE_SALT',       '68i_Y|D}EmK3UA.l1-${HX^DEMGc@2y5;5z):Q:58_uC3Eaq7NN
  * それぞれにユニーク (一意) な接頭辞を与えることで一つのデータベースに複数の WordPress を
  * インストールすることができます。半角英数字と下線のみを使用してください。
  */
-$table_prefix = 'wp_';
+$table_prefix  = 'wp20211110215444_';
 
 /**
  * 開発者へ: WordPress デバッグモード
@@ -77,22 +77,18 @@ $table_prefix = 'wp_';
  * この値を true にすると、開発中に注意 (notice) を表示します。
  * テーマおよびプラグインの開発者には、その開発環境においてこの WP_DEBUG を使用することを強く推奨します。
  *
- * その他のデバッグに利用できる定数についてはドキュメンテーションをご覧ください。
+ * その他のデバッグに利用できる定数については Codex をご覧ください。
  *
- * @link https://ja.wordpress.org/support/article/debugging-in-wordpress/
+ * @link http://wpdocs.osdn.jp/WordPress%E3%81%A7%E3%81%AE%E3%83%87%E3%83%90%E3%83%83%E3%82%B0
  */
-define( 'WP_DEBUG', false );
+define('WP_DEBUG', false);
 
-/* カスタム値は、この行と「編集が必要なのはここまでです」の行の間に追加してください。 */
-
-
-
-/* 編集が必要なのはここまでです ! WordPress でのパブリッシングをお楽しみください。 */
+/* 編集が必要なのはここまでです ! WordPress でブログをお楽しみください。 */
 
 /** Absolute path to the WordPress directory. */
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/' );
+if (!defined('ABSPATH')) {
+  define('ABSPATH', dirname(__FILE__) . '/');
 }
 
 /** Sets up WordPress vars and included files. */
-require_once ABSPATH . 'wp-settings.php';
+require_once(ABSPATH . 'wp-settings.php');
