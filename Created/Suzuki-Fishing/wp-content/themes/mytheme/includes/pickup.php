@@ -9,7 +9,7 @@ $top_query = new WP_Query("tag='ピックアップ'");
         $img = wp_get_attachment_image_src($id);
         ?>
         <?php if (have_posts()) : ?>
-            <a class="col-12 pickup-content" href="<?php the_permalink(); ?>">
+            <a class="pickup-content" href="<?php the_permalink(); ?>">
                 <div class="row position-relative">
                     <!-- アイキャッチ画像 -->
                     <img class="img-fluid mb-3" src="<?php echo $img[0] ?>" alt="">
