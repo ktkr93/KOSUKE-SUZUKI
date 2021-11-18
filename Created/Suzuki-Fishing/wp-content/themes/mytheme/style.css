@@ -117,23 +117,13 @@ h2 {
 }
 
 .time-position-absolute {
-    margin: 0 0 10px 0;
     text-align: end;
     font-size: .7rem;
-    /* 記事の公開日・更新日を右下に配置 */
-    position: relative;
-    right: -32%;
-    bottom: 0;
 }
 
 .pickup-time-position-absolute {
-    margin: 0 0 10px 0;
     text-align: end;
     font-size: .7rem;
-    /* 記事の公開日・更新日を右下に配置 */
-    position: absolute;
-    right: 6%;
-    bottom: 4%;
 }
 
 .far-position {

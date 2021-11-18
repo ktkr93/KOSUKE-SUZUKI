@@ -9,7 +9,7 @@ $top_query = new WP_Query("tag='ピックアップ'");
         $img = wp_get_attachment_image_src($id);
         ?>
         <?php if (have_posts()) : ?>
-            <a class="pickup-content" href="<?php the_permalink(); ?>">
+            <a class="col-12 pickup-content" href="<?php the_permalink(); ?>">
                 <div class="row position-relative">
                     <!-- アイキャッチ画像 -->
                     <img class="img-fluid mb-3" src="<?php echo $img[0] ?>" alt="">
@@ -28,14 +28,16 @@ $top_query = new WP_Query("tag='ピックアップ'");
                     <div class="excerpt-text">
                         <?php the_excerpt(); ?>
                     </div>
-                    <time class="pickup-time-position-absolute">
-                        <i class="far fa-clock far-position"></i>
-                        <?php if (get_the_time('Y/m/d') == get_the_modified_date('Y/m/d')) : ?>
-                            公開日: <?php the_time('Y/m/d') ?>
-                        <?php else : ?>
-                            最終更新日: <?php the_modified_date('Y/m/d') ?>
-                        <?php endif; ?>
-                    </time>
+                    <div class="row">
+                        <time class="pickup-time-position-absolute">
+                            <i class="far fa-clock far-position"></i>
+                            <?php if (get_the_time('Y/m/d') == get_the_modified_date('Y/m/d')) : ?>
+                                公開日: <?php the_time('Y/m/d') ?>
+                            <?php else : ?>
+                                最終更新日: <?php the_modified_date('Y/m/d') ?>
+                            <?php endif; ?>
+                        </time>
+                    </div>
             </a>
         <?php else : ?>
             <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/no-img.jpg" alt="">

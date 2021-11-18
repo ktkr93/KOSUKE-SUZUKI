@@ -45,14 +45,16 @@
                                         <div class="excerpt-text">
                                             <?php the_excerpt() ?>
                                         </div>
-                                        <time class="time-position-absolute">
-                                            <i class="far fa-clock far-position"></i>
-                                            <?php if (get_the_time('Y/m/d') == get_the_modified_date('Y/m/d')) : ?>
-                                                公開日: <?php the_time('Y/m/d') ?>
-                                            <?php else : ?>
-                                                最終更新日: <?php the_modified_date('Y/m/d') ?>
-                                            <?php endif; ?>
-                                        </time>
+                                        <div class="row">
+                                            <time class="time-position-absolute">
+                                                <i class="far fa-clock far-position"></i>
+                                                <?php if (get_the_time('Y/m/d') == get_the_modified_date('Y/m/d')) : ?>
+                                                    公開日: <?php the_time('Y/m/d') ?>
+                                                <?php else : ?>
+                                                    最終更新日: <?php the_modified_date('Y/m/d') ?>
+                                                <?php endif; ?>
+                                            </time>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
