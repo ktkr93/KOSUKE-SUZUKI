@@ -1,0 +1,204 @@
+/**
+ * ***************************************
+ * ページ全体に関わるCSSの設定
+ * ***************************************
+ */
+
+
+/* フォント */
+
+html {
+    font-size: 14px;
+    @media (min-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* おもな太字タグのフォントウェイト設定 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+strong {
+    font-weight: 700;
+}
+
+
+/* ベースのリンクカラー */
+
+a {
+    color: #f30;
+}
+
+
+/* レスポンシブイメージと画像下スペース防止 */
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    /* 画像下のスペースを消す */
+}
+
+//メインタイトル
+.page-title-container {
+    max-width: 300px;
+    margin: 60px auto;
+    padding: 0 2%;
+    h1 {
+        font-size: 1.85rem;
+        font-weight: lighter;
+        letter-spacing: 0.5rem;
+    }
+    h2 {
+        margin-top: 7px;
+        font-size: 0.85rem;
+        color: #545454;
+        line-height: 1.2rem;
+        letter-spacing: 0.06rem;
+    }
+    @media (min-width: 768px) {
+        max-width: 415px;
+        margin: 200px auto 0 auto;
+        padding: 0 40px;
+        h1 {
+            font-size: 1.875rem;
+            letter-spacing: 0.5rem;
+        }
+    }
+}
+
+//自己紹介＆スキル
+.self-intro-container {
+    max-width: 300px;
+    margin: 60px auto;
+    padding: 0 2%;
+    p {
+        line-height: 1.6rem;
+        letter-spacing: 0.08rem;
+    }
+    ul {
+        margin-top: 40px;
+        padding-left: 1.5rem;
+        list-style: circle;
+        li,
+        p {
+            font-size: 0.85rem;
+        }
+        li {
+            margin-top: 16px;
+            font-weight: bold;
+        }
+        .self-intro-description {
+            font-size: 0.7rem;
+        }
+    }
+    @media (min-width: 768px) {
+        max-width: 900px;
+        margin: 200px auto 80px auto;
+    }
+}
+
+//制作物
+.created {
+    background-color: #F5F5F5;
+    .created-container {
+        max-width: 342px;
+        margin: 0 auto;
+        padding: 32px 2%;
+        h3 {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        @media (min-width: 768px) {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            h3 {
+                font-size: 1.75rem;
+                font-weight: normal;
+                margin-bottom: 80px;
+            }
+        }
+        .created-item {
+            margin-bottom: 40px;
+            h4,
+            p {
+                font-size: .85rem;
+                line-height: 1.5rem;
+                margin-bottom: 10px;
+            }
+            h4 {
+                margin-bottom: 4px;
+            }
+            p {
+                margin-bottom: 10px;
+            }
+            .font-normal {
+                font-weight: normal;
+            }
+            .font-bold {
+                font-weight: bold;
+            }
+            a {
+                display: block;
+                transition: 0.5s;
+                &:hover {
+                    opacity: 0.5;
+                }
+                img {
+                    width: 100%;
+                    height: 202px;
+                    object-fit: cover;
+                    object-position: top;
+                }
+                @media (min-width: 768px) {
+                    img {
+                        height: 420px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//プロフィール
+.profile {
+    .profile-container {
+        max-width: 340px;
+        margin: 60px auto 40px auto;
+        padding: 0 2%;
+        display: flex;
+        gap: 20px;
+        @media (min-width: 768px) {
+            max-width: 940px;
+            margin: 80px auto;
+            padding: 0 40px;
+        }
+        .profile-img {
+            min-width: 90px;
+            img {
+                width: 100%;
+            }
+        }
+        .profile-text {
+            h3 {
+                font-weight: normal;
+            }
+            p {
+                font-size: 0.85rem;
+                line-height: 1.2rem;
+                margin-top: 12px;
+            }
+        }
+    }
+}
