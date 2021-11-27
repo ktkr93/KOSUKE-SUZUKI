@@ -40,7 +40,7 @@ $top_query = new WP_Query("tag='ピックアップ'");
                     </div>
             </a>
         <?php else : ?>
-            <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/no-img.jpg" alt="">
+            <img class="img-fluid" src="<?php echo home_url() ?>/img/no-img.jpg" alt="">
         <?php endif ?>
         </div>
     <?php endwhile; ?>

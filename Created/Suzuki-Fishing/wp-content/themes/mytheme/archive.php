@@ -30,7 +30,7 @@
                                         <?php if (has_post_thumbnail()) : ?>
                                             <img class="img-fluid" src="<?php echo $img[0] ?>" alt="">
                                         <?php else : ?>
-                                            <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/no-img.jpg" alt="">
+                                            <img class="img-fluid" src="<?php echo home_url() ?>/img/no-img.jpg" alt="">
                                         <?php endif ?>
                                     </div>
                                     <div class="col-7 position-relative">

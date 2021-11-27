@@ -23,7 +23,7 @@
                         <?php if (has_post_thumbnail()) : ?>
                             <img class="img-fluid" src="<?php echo $img[0] ?>" alt="">
                         <?php else : ?>
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/no-img.jpg" alt="">
+                            <img class="img-fluid" src="<?php echo home_url() ?>/img/no-img.jpg" alt="">
                         <?php endif ?>
                     </div>
                     <div class="col-7 position-relative">
@@ -58,6 +58,6 @@
     endif;
     wp_reset_postdata(); ?>
     <div class="d-flex justify-content-end mb-4">
-        <a class="btn-link" href="<?php echo esc_url(get_template_directory_uri()) ?>/ranking">人気記事一覧を見る<i style="margin-left: 10px;" class="fas fa-chevron-right"></i></a>
+        <a class="btn-link" href="<?php echo esc_url(home_url()) ?>/ranking">人気記事一覧を見る<i style="margin-left: 10px;" class="fas fa-chevron-right"></i></a>
     </div>
 </aside>

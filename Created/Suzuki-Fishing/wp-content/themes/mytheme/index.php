@@ -18,7 +18,7 @@
                 <div class="col-12 col-md-8 col-lg-8 col-xl-8 mb-4">
                     <!-- timeを右寄せにするためrowを設定 -->
                     <?php get_template_part('includes/pickup') ?>
-                    <?php get_template_part('includes/newpost') ?>
+                    <?php get_template_part('includes/new5post') ?>
                 </div>
                 <div class="col-12 col-md-4 col-lg-4 col-xl-4 mb-4">
                     <?php get_template_part('includes/ranking5') ?>

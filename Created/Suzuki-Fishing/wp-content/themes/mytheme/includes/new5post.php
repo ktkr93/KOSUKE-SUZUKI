@@ -6,7 +6,7 @@ $args = array(
     'order' => 'DESC',
     'showposts' => 5,
 ); ?>
-<a href="<?php echo esc_url(get_template_directory_uri()) ?>/archive">
+<a href="<?php echo esc_url(home_url()) ?>/archive">
     <h2 class="mb-3 h3"><span class="border-left"></span>新着記事</h2>
 </a>
 <?php
