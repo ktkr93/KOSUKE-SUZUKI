@@ -118,6 +118,10 @@ img {
         h3 {
             text-align: center;
             margin-bottom: 32px;
+            span {
+                font-size: .85rem;
+                font-weight: normal;
+            }
         }
         @media (min-width: 768px) {
             max-width: 980px;

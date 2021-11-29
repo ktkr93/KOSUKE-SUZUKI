@@ -129,6 +129,11 @@ img {
   margin-bottom: 32px;
 }
 
+.created .created-container h3 span {
+  font-size: .85rem;
+  font-weight: normal;
+}
+
 @media (min-width: 768px) {
   .created .created-container {
     max-width: 980px;
