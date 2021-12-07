@@ -1,0 +1,120 @@
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  header .header-container .flex {
+    height: 70px;
+  }
+  header .header-container .flex a {
+    display: contents;
+  }
+  header .header-container .openbtn {
+    opacity: 0;
+  }
+  header .header-container .openbtn span {
+    opacity: 0;
+  }
+  .menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu ul {
+    width: 387px;
+    height: 70px;
+    background-color: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: fixed;
+    right: 8%;
+  }
+  .menu ul li {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .lead .lead-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3% 6%;
+  }
+  .lead .lead-container .cta-link {
+    margin: 0 auto 16px auto;
+    padding: 2% 0%;
+    width: 300px;
+  }
+  .lead .lead-container .cta-register {
+    padding: 2% 0%;
+    width: 300px;
+  }
+  .lifespan .lifespan-container {
+    max-width: 800px;
+  }
+  .lifespan .lifespan-container p {
+    line-height: 1.75rem;
+  }
+  .content .content-container {
+    max-width: 800px;
+  }
+  .content .content-container .content-ability h2:after {
+    width: 10%;
+  }
+  .content .content-container .content-ability img {
+    height: 375px;
+  }
+  .content .content-container .content-ability .cta-link {
+    padding: 2% 0%;
+    width: 300px;
+  }
+  .content .content-container .content-sick .cta-link {
+    padding: 2% 0%;
+    width: 300px;
+  }
+  .content .content-container .content-news h2:after {
+    width: 10%;
+  }
+  .content .content-container .content-news dl {
+    border-top: 1px solid #C7C7C7;
+    margin-bottom: 40px;
+  }
+  .content .content-container .content-news dl a {
+    display: block;
+    padding: 20px 0;
+    border-bottom: 1px solid #C7C7C7;
+  }
+  .content .content-container .content-news dl a dt {
+    margin-bottom: 20px;
+  }
+  .content .content-container .content-news .cta-link {
+    padding: 2% 0%;
+    width: 300px;
+  }
+  footer .footer-container {
+    max-width: 800px;
+  }
+  .bottom {
+    background-color: #fff;
+  }
+  .bottom .bottom-container {
+    padding: 40px 0;
+  }
+  .bottom .bottom-container p {
+    text-align: center;
+  }
+  .page-regi-heading .regi-heading-container {
+    padding: calc(2% + 70px) 4% 2% 4%;
+  }
+  .page-regi-main .regi-main-container {
+    margin: 0 auto;
+    padding: 0 4%;
+    max-width: 900px;
+  }
+  .page-regi-main .regi-main-container form .inq-send {
+    width: 40%;
+    padding: 2% 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

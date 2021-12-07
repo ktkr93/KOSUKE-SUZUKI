@@ -1,0 +1,144 @@
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+    //header
+    header {
+        .header-container {
+            .flex {
+                height: 70px;
+                a {
+                    display: contents;
+                }
+            }
+            .openbtn {
+                opacity: 0;
+            }
+            .openbtn span {
+                opacity: 0;
+            }
+        }
+    }
+    .menu {
+        opacity: 1;
+        visibility: visible;
+        ul {
+            width: 387px;
+            height: 70px;
+            background-color: unset;
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            right: 8%;
+            li {
+                font-weight: bold;
+                font-size: 1rem;
+            }
+        }
+    }
+    .lead {
+        .lead-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3% 6%;
+            .cta-link {
+                margin: 0 auto 16px auto;
+                padding: 2% 0%;
+                width: 300px;
+            }
+            .cta-register {
+                padding: 2% 0%;
+                width: 300px;
+            }
+        }
+    }
+    .lifespan {
+        .lifespan-container {
+            max-width: 800px;
+            p {
+                line-height: 1.75rem;
+            }
+        }
+    }
+    .content {
+        .content-container {
+            max-width: 800px;
+            .content-ability {
+                h2 {
+                    &:after {
+                        width: 10%;
+                    }
+                }
+                img {
+                    height: 375px;
+                }
+                .cta-link {
+                    padding: 2% 0%;
+                    width: 300px;
+                }
+            }
+            .content-sick {
+                .cta-link {
+                    padding: 2% 0%;
+                    width: 300px;
+                }
+            }
+            .content-news {
+                h2 {
+                    &:after {
+                        width: 10%;
+                    }
+                }
+                dl {
+                    border-top: 1px solid #C7C7C7;
+                    margin-bottom: 40px;
+                    a {
+                        display: block;
+                        padding: 20px 0;
+                        border-bottom: 1px solid #C7C7C7;
+                        dt {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+                .cta-link {
+                    padding: 2% 0%;
+                    width: 300px;
+                }
+            }
+        }
+    }
+    footer {
+        .footer-container {
+            max-width: 800px;
+        }
+    }
+    .bottom {
+        background-color: #fff;
+        .bottom-container {
+            padding: 40px 0;
+            p {
+                text-align: center;
+            }
+        }
+    }
+    //登録ページ
+    .page-regi-heading {
+        .regi-heading-container {
+            padding: calc(2% + 70px) 4% 2% 4%;
+        }
+    }
+    .page-regi-main {
+        .regi-main-container {
+            margin: 0 auto;
+            padding: 0 4%;
+            max-width: 900px;
+            form {
+                .inq-send {
+                    width: 40%;
+                    padding: 2% 0;
+                }
+            }
+        }
+    }
+}
