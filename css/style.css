@@ -44,6 +44,39 @@ img {
   /* 画像下のスペースを消す */
 }
 
+i {
+  margin-left: .4rem;
+  font-size: 1rem;
+}
+
+.fa-css3-alt {
+  color: #0170BA;
+}
+
+.fa-sass {
+  color: #C76494;
+}
+
+.fa-js-square {
+  color: #EFD81D;
+}
+
+.fa-php {
+  color: #7377AD;
+}
+
+.fa-git-alt {
+  color: #E84D31;
+}
+
+.fa-wordpress {
+  color: #045F84;
+}
+
+.fa-figma {
+  color: #9D56F7;
+}
+
 .page-title-container {
   max-width: 300px;
   margin: 60px auto;
@@ -91,6 +124,20 @@ img {
   margin-top: 40px;
   padding-left: 1.5rem;
   list-style: circle;
+}
+
+.self-intro-container ul .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 5fr;
+      grid-template-columns: 3fr 5fr;
+}
+
+@media (min-width: 768px) {
+  .self-intro-container ul .grid {
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
+  }
 }
 
 .self-intro-container ul li,
@@ -143,7 +190,7 @@ img {
   .created .created-container h3 {
     font-size: 1.75rem;
     font-weight: normal;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 }
 

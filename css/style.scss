@@ -49,6 +49,40 @@ img {
     /* 画像下のスペースを消す */
 }
 
+//fontawesomeアイコン設定
+i {
+    margin-left: .4rem;
+    font-size: 1rem;
+}
+
+.fa-css3-alt {
+    color: #0170BA;
+}
+
+.fa-sass {
+    color: #C76494;
+}
+
+.fa-js-square {
+    color: #EFD81D;
+}
+
+.fa-php {
+    color: #7377AD;
+}
+
+.fa-git-alt {
+    color: #E84D31;
+}
+
+.fa-wordpress {
+    color: #045F84;
+}
+
+.fa-figma {
+    color: #9D56F7;
+}
+
 //メインタイトル
 .page-title-container {
     max-width: 300px;
@@ -90,6 +124,13 @@ img {
         margin-top: 40px;
         padding-left: 1.5rem;
         list-style: circle;
+        .grid {
+            display: grid;
+            grid-template-columns: 3fr 5fr;
+            @media (min-width: 768px) {
+                grid-template-columns: 1fr 3fr;
+            }
+        }
         li,
         p {
             font-size: 0.85rem;
@@ -130,7 +171,7 @@ img {
             h3 {
                 font-size: 1.75rem;
                 font-weight: normal;
-                margin-bottom: 80px;
+                margin-bottom: 60px;
             }
         }
         .created-item {
