@@ -639,18 +639,20 @@
                 }
                 .inq-back,
                 .inq-send {
-                    margin-bottom: 60px;
                     width: 100%;
                     padding: 4% 0;
+                    display: block;
                     color: #fff;
-                    background-color: #747474;
                     border-radius: 12px;
                     text-align: center;
                     font-weight: bold;
                     font-size: 1.2rem;
                 }
+                .inq-back {
+                    margin: 0 auto 60px auto;
+                    background-color: #747474;
+                }
                 .inq-send {
-                    display: block;
                     margin: 0 auto 20px auto;
                     background-color: #7BBEE3;
                 }

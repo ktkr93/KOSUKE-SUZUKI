@@ -112,7 +112,8 @@
     padding: 0 4%;
     max-width: 900px;
   }
-  .page-regi-main .regi-main-container form .inq-send {
+  .page-regi-main .regi-main-container form .inq-send,
+  .page-regi-main .regi-main-container form .inq-back {
     width: 40%;
     padding: 2% 0;
   }

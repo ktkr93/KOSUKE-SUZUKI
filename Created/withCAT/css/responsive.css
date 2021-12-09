@@ -721,19 +721,22 @@ footer .footer-container .footer-tc li a {
 
 .page-regi-main .regi-main-container form .inq-back,
 .page-regi-main .regi-main-container form .inq-send {
-  margin-bottom: 60px;
   width: 100%;
   padding: 4% 0;
+  display: block;
   color: #fff;
-  background-color: #747474;
   border-radius: 12px;
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
 }
 
+.page-regi-main .regi-main-container form .inq-back {
+  margin: 0 auto 60px auto;
+  background-color: #747474;
+}
+
 .page-regi-main .regi-main-container form .inq-send {
-  display: block;
   margin: 0 auto 20px auto;
   background-color: #7BBEE3;
 }
